@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:layout_margin="20dp"
+    tools:context=".PersonalIntroduceActivity">
+
+    <ImageView
+        android:id="@+id/personalImageView"
+        android:layout_width="190dp"
+        android:layout_height="230dp"
+        android:src="@drawable/people"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/personalName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:text="이름"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/personalImageView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/nameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="홍길동"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/personalImageView"
+        app:layout_constraintTop_toTopOf="@+id/personalName" />
+
+    <TextView
+        android:id="@+id/birthDay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="생년월일"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/personalImageView"
+        app:layout_constraintTop_toTopOf="@+id/nameTextView" />
+
+    <TextView
+        android:id="@+id/birthdayTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="24.02.26"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/personalImageView"
+        app:layout_constraintTop_toTopOf="@+id/birthDay" />
+
+    <TextView
+        android:id="@+id/personalMbti"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="MBTI"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/personalImageView"
+        app:layout_constraintTop_toTopOf="@+id/birthdayTextView" />
+
+    <TextView
+        android:id="@+id/mbtiTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="INFJ"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/personalImageView"
+        app:layout_constraintTop_toTopOf="@+id/personalMbti" />
+
+    <TextView
+        android:id="@+id/personalHobby"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="취미"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/personalImageView"
+        app:layout_constraintTop_toTopOf="@+id/mbtiTextView" />
+
+    <TextView
+        android:id="@+id/hobbyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="잠자기"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/personalImageView"
+        app:layout_constraintTop_toTopOf="@+id/personalHobby" />
+
+    <TextView
+        android:id="@+id/momentTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/moment"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/personalImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <View
+        android:layout_width="140dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/momentTitle" />
+
+    <TextView
+        android:id="@+id/momentText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:maxLines="3"
+        android:text="안드로이드 앱 개발을 하기위해 지원했습니다 반갑습니다. 감사합니다 사랑합니다. 잘봐주세요. 앞으로 열심히 하겠습니다. 사실 뭐가 뭔지 모르겠습니다. 살려주세요."
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/momentTitle" />
+
+    <TextView
+        android:id="@+id/myGoalTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/myGoal"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/momentText" />
+
+    <View
+        android:layout_width="140dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/grey"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myGoalTitle" />
+
+    <TextView
+        android:id="@+id/myGoalText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:maxLines="3"
+        android:text="안드로이드 앱 개발을 하기위해 지원했습니다 반갑습니다. 감사합니다 사랑합니다. 잘봐주세요. 앞으로 열심히 하겠습니다. 사실 뭐가 뭔지 모르겠습니다. 살려주세요."
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myGoalTitle"/>
+
+    <TextView
+        android:id="@+id/myResolveTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/myResolve"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myGoalText"/>
+
+    <View
+        android:layout_width="140dp"
+        android:layout_height="3dp"
+        android:background="@color/grey"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myResolveTitle"/>
+
+    <TextView
+        android:id="@+id/myResolveText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:maxLines="3"
+        android:text="안드로이드 앱 개발을 하기위해 지원했습니다 반갑습니다. 감사합니다 사랑합니다. 잘봐주세요. 앞으로 열심히 하겠습니다. 사실 뭐가 뭔지 모르겠습니다. 살려주세요."
+        android:textSize="15sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/myResolveTitle"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

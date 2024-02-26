@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">kotlin_ot_project_I</string>
     <string name="teamIntroduce">팀 소개</string>
+    <string name="moment">지원 계기</string>
+    <string name="myGoal">나의 목표</string>
+    <string name="myResolve">나의 각오</string>
 </resources>
