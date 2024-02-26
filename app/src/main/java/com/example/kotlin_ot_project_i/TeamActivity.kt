@@ -3,7 +3,6 @@ package com.example.kotlin_ot_project_i
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.ImageButton
 import android.widget.ImageView
 
 class TeamActivity : AppCompatActivity() {
