@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
                 android:layout_marginTop="45dp"
-                android:text="@string/teamIntroduce" />
+                android:text="@string/memberIntroduce" />
 
             <View
                 android:layout_width="match_parent"
