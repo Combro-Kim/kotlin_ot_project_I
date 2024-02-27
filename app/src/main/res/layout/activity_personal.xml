@@ -16,6 +16,7 @@
         android:id="@+id/iv_personal"
         android:layout_width="190dp"
         android:layout_height="230dp"
+        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:src="@drawable/people"
         app:layout_constraintStart_toStartOf="parent"
