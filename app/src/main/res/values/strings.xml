@@ -52,8 +52,8 @@
     <string name="hobby4">프라모델 만들기</string>\
     <string name="mbti4">INFP</string>
     <string name="work4">팀원</string>
-    <string name="moment4"></string>
-    <string name="goal4"></string>
-    <string name="resolve4"></string>
-    
+    <string name="moment4"> "많은 캠프 중에서 전액 국비지원이며 시작이 가장 빠른 캠프인 앱개발 캠프를, 그 중에도 제가 사용하는 모바일OS인 안드로이드 과정을 선택하게 되었습니다. </string>
+    <string name="goal4">"본 캠프에서 앱개발에 대해 배워서 안정적이고 사용감이 좋은 앱을 개발하는 것"</string>
+    <string name="resolve4">"중도 포기하지 않고 끝까지 열심히 역량을 키워가겠습니다."</string>
+
 </resources>

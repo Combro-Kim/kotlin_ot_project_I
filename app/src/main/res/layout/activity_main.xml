@@ -11,7 +11,7 @@
         android:id="@+id/teamName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="팀 소개"
+        android:text="@string/teamIntroduce"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.037"
@@ -25,13 +25,13 @@
         android:layout_height="3dp"
         android:layout_marginBottom="12dp"
         android:background="#A5A5A5"
-        app:layout_constraintBottom_toTopOf="@+id/imageButton5"
+        app:layout_constraintBottom_toTopOf="@+id/teamIB"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageButton
-        android:id="@+id/imageButton5"
+        android:id="@+id/teamIB"
         android:layout_width="260dp"
         android:layout_height="150dp"
         android:layout_marginTop="50dp"
@@ -47,7 +47,7 @@
         android:text="I(1조) 팀의 소개"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5" />
+        app:layout_constraintTop_toBottomOf="@+id/teamIB" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -70,16 +70,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton5"
+        app:layout_constraintTop_toBottomOf="@+id/teamIB"
         tools:ignore="MissingConstraints" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/memberIB1"
         android:layout_width="135dp"
         android:layout_height="150dp"
         android:layout_marginTop="20dp"
-        android:src="@drawable/ok"
-        app:layout_constraintEnd_toStartOf="@+id/imageButton2"
+        android:src="@drawable/thumbnail1"
+        app:layout_constraintEnd_toStartOf="@+id/memberIB2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view"
         tools:ignore="SpeakableTextPresentCheck" />
@@ -88,10 +88,10 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="김재현"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton" />
+        android:text="@string/name1"
+        app:layout_constraintEnd_toEndOf="@+id/memberIB1"
+        app:layout_constraintStart_toStartOf="@+id/memberIB1"
+        app:layout_constraintTop_toBottomOf="@+id/memberIB1" />
 
     <TextView
         android:id="@+id/textView5"
@@ -103,12 +103,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/memberIB2"
         android:layout_width="135dp"
         android:layout_height="150dp"
         android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageButton"
+        app:layout_constraintStart_toEndOf="@+id/memberIB1"
         app:layout_constraintTop_toBottomOf="@+id/view"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -116,10 +116,10 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="김재혁"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton2" />
+        android:text="@string/name2"
+        app:layout_constraintEnd_toEndOf="@+id/memberIB2"
+        app:layout_constraintStart_toStartOf="@+id/memberIB2"
+        app:layout_constraintTop_toBottomOf="@+id/memberIB2" />
 
     <TextView
         android:id="@+id/textView6"
@@ -131,12 +131,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/memberIB3"
         android:layout_width="135dp"
         android:layout_height="150dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
+        app:layout_constraintEnd_toEndOf="@+id/memberIB1"
+        app:layout_constraintStart_toStartOf="@+id/memberIB1"
         app:layout_constraintTop_toBottomOf="@+id/textView5"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -144,10 +144,10 @@
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="김재혁"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton3"
-        app:layout_constraintStart_toStartOf="@+id/imageButton3"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton3" />
+        android:text="@string/name3"
+        app:layout_constraintEnd_toEndOf="@+id/memberIB3"
+        app:layout_constraintStart_toStartOf="@+id/memberIB3"
+        app:layout_constraintTop_toBottomOf="@+id/memberIB3" />
 
     <TextView
         android:id="@+id/textView8"
@@ -159,12 +159,12 @@
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <ImageButton
-        android:id="@+id/imageButton4"
+        android:id="@+id/memberIB4"
         android:layout_width="135dp"
         android:layout_height="150dp"
         android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton2"
-        app:layout_constraintStart_toStartOf="@+id/imageButton2"
+        app:layout_constraintEnd_toEndOf="@+id/memberIB2"
+        app:layout_constraintStart_toStartOf="@+id/memberIB2"
         app:layout_constraintTop_toBottomOf="@+id/textView6"
         tools:ignore="SpeakableTextPresentCheck" />
 
@@ -172,16 +172,16 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="김재혁"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton4"
-        app:layout_constraintStart_toStartOf="@+id/imageButton4"
-        app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
+        android:text="@string/name4"
+        app:layout_constraintEnd_toEndOf="@+id/memberIB4"
+        app:layout_constraintStart_toStartOf="@+id/memberIB4"
+        app:layout_constraintTop_toBottomOf="@+id/memberIB4" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="000000/MBTI/지역"
+        android:text="980118/INFP/경북"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />
