@@ -3,9 +3,9 @@ package com.example.kotlin_ot_project_i
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.kotlin_ot_project_i.databinding.ActivityPersonalIntroduceBinding
+import com.example.kotlin_ot_project_i.databinding.ActivityPersonalBinding
 
-class PersonalIntroduceActivity : AppCompatActivity() {
+class PersonalActivity : AppCompatActivity() {
     private val nameOfTeam = listOf(
         R.string.name1,
         R.string.name2,
@@ -30,7 +30,7 @@ class PersonalIntroduceActivity : AppCompatActivity() {
         R.string.birthday3,
         R.string.birthday4
     )
-    private val workOfTeam = listOf(
+    private val roleOfTeam = listOf(
         R.string.work1,
         R.string.work2,
         R.string.work3,
@@ -54,10 +54,10 @@ class PersonalIntroduceActivity : AppCompatActivity() {
         R.string.resolve3,
         R.string.resolve4
     )
-    private lateinit var binding: ActivityPersonalIntroduceBinding
+    private lateinit var binding: ActivityPersonalBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityPersonalIntroduceBinding.inflate(layoutInflater)
+        binding = ActivityPersonalBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val idx = intent.getIntExtra("indexNumber",0)
 
@@ -69,6 +69,7 @@ class PersonalIntroduceActivity : AppCompatActivity() {
         binding.momentText.text = getString(momentOfTeam[idx])
         binding.goalText.text = getString(goalOfTeam[idx])
         binding.resolveText.text = getString(resolveOfTeam[idx])
+        binding.roleText.text = getString(roleOfTeam[idx])
 
         binding.personalToolbar.returnBtn.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)

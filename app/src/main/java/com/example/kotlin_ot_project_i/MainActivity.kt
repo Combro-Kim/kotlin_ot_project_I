@@ -2,7 +2,6 @@ package com.example.kotlin_ot_project_i
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.TextView
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 
 class MainActivity : AppCompatActivity() {
@@ -11,8 +10,6 @@ class MainActivity : AppCompatActivity() {
         Thread.sleep(1000)
         installSplashScreen()
         setContentView(R.layout.activity_main)
-
-
 
     }
 }
