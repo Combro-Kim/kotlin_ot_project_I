@@ -27,7 +27,7 @@
     <!-- 김재혁 -->
     <string name="name2">김재혁</string>
     <string name="birthday2">00. 00. 00</string>
-    <string name="hobby2">취미에요</string>\
+    <string name="hobby2">취미에요</string>
     <string name="mbti2">INFP</string>
     <string name="work2">팀원</string>
     <string name="moment2"></string>
@@ -37,13 +37,13 @@
 
     <!-- 임채명 -->
     <string name="name3">임채명</string>
-    <string name="birthday3">00. 00. 00</string>
-    <string name="hobby3">취미에요</string>\
-    <string name="mbti3">INFP</string>
+    <string name="birthday3">91. 03. 18</string>
+    <string name="hobby3">음악감상</string>\
+    <string name="mbti3">INFJ</string>
     <string name="work3">팀원</string>
-    <string name="moment3"></string>
-    <string name="goal3"></string>
-    <string name="resolve3"></string>
+    <string name="moment3">상상을 실재로.\n생각만 하던 것들을 실제로 조작할 수 있도록 구현을 한다는 부분에서 개발에 매력을 느껴서 지원하였습니다.</string>
+    <string name="goal3">내일배움캠프를 통해 기본적인 역량을 갖추고, 취업을 하고 싶습니다.</string>
+    <string name="resolve3">조금 늦더라도 포기하지 않고 끝까지 완주할 수 있도록 하여 목표를 달성하도록 하겠습니다.</string>
 
 
     <!-- 이성민 -->

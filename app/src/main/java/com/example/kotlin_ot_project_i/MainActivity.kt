@@ -20,22 +20,22 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         binding.memberIB1.setOnClickListener{
-            val intent = Intent(this, PersonalIntroduceActivity::class.java)
+            val intent = Intent(this, PersonalActivity::class.java)
             intent.putExtra("indexNumber", 0)
             startActivity(intent)
         }
         binding.memberIB2.setOnClickListener{
-            val intent = Intent(this, PersonalIntroduceActivity::class.java)
+            val intent = Intent(this, PersonalActivity::class.java)
             intent.putExtra("indexNumber", 1)
             startActivity(intent)
         }
         binding.memberIB3.setOnClickListener{
-            val intent = Intent(this, PersonalIntroduceActivity::class.java)
+            val intent = Intent(this, PersonalActivity::class.java)
             intent.putExtra("indexNumber", 2)
             startActivity(intent)
         }
         binding.memberIB4.setOnClickListener{
-            val intent = Intent(this, PersonalIntroduceActivity::class.java)
+            val intent = Intent(this, PersonalActivity::class.java)
             intent.putExtra("indexNumber", 3)
             startActivity(intent)
         }

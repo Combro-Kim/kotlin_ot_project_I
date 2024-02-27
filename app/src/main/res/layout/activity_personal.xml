@@ -6,50 +6,47 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".PersonalIntroduceActivity">
+    tools:context=".PersonalActivity">
 
     <include
         layout = "@layout/toolbar"
         android:id = "@+id/personal_toolbar"/>
 
     <ImageView
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
         android:id="@+id/iv_personal"
         android:layout_width="190dp"
         android:layout_height="190dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:src="@drawable/people"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/personal_toolbar" />
 
     <TextView
-        android:layout_marginEnd="20dp"
         android:id="@+id/personalNameTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="이름"
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/iv_personal"
-        app:layout_constraintTop_toBottomOf="@+id/personal_toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/personal_toolbar"/>
 
     <TextView
-        android:layout_marginEnd="20dp"
         android:id="@+id/personalNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:text=""
+        android:text="홍길동"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/iv_personal"
         app:layout_constraintTop_toTopOf="@+id/personalNameTitle" />
 
     <TextView
-        android:layout_marginEnd="20dp"
         android:id="@+id/birthdayTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -62,20 +59,19 @@
         app:layout_constraintTop_toTopOf="@+id/personalNameText" />
 
     <TextView
-        android:layout_marginEnd="20dp"
         android:id="@+id/birthdayText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:text=""
+        android:text="24.02.26"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/iv_personal"
         app:layout_constraintTop_toTopOf="@+id/birthdayTitle" />
 
     <TextView
+        android:id="@+id/mbtiTitle"
         android:layout_marginEnd="20dp"
-        android:id="@+id/personalMbtiTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -87,20 +83,18 @@
         app:layout_constraintTop_toTopOf="@+id/birthdayText" />
 
     <TextView
-        android:layout_marginEnd="20dp"
         android:id="@+id/mbtiText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:text=""
+        android:text="INFJ"
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/iv_personal"
-        app:layout_constraintTop_toTopOf="@+id/personalMbtiTitle" />
+        app:layout_constraintTop_toTopOf="@+id/mbtiTitle" />
 
     <TextView
-        android:layout_marginEnd="20dp"
-        android:id="@+id/personalHobbyTitle"
+        android:id="@+id/hobbyTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -112,63 +106,83 @@
         app:layout_constraintTop_toTopOf="@+id/mbtiText" />
 
     <TextView
-        android:layout_marginEnd="20dp"
         android:id="@+id/hobbyText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:text=""
+        android:text="잠자기"
         android:textSize="14sp"
         android:textStyle="normal"
         app:layout_constraintStart_toEndOf="@+id/iv_personal"
-        app:layout_constraintTop_toTopOf="@+id/personalHobbyTitle" />
+        app:layout_constraintTop_toTopOf="@+id/hobbyTitle" />
+
+    <TextView
+        android:id="@+id/roleTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
+        android:text="역할"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@+id/iv_personal"
+        app:layout_constraintTop_toTopOf="@+id/hobbyText" />
+
+    <TextView
+        android:id="@+id/roleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="20dp"
+        android:text="팀원"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toEndOf="@+id/iv_personal"
+        app:layout_constraintTop_toTopOf="@+id/roleTitle" />
 
 
 
     <TextView
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
         android:id="@+id/momentTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="40dp"
         android:text="@string/moment"
+        android:layout_marginStart="20dp"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@id/iv_personal"
-        app:layout_constraintStart_toStartOf="parent"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <View
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
         android:layout_width="140dp"
         android:layout_height="3dp"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
         android:background="@color/grey"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/momentTitle" />
 
     <TextView
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
+
         android:id="@+id/momentText"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
-        android:text=""
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:text="지원계기에요"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/momentTitle" />
 
     <TextView
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
         android:id="@+id/goalTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
         android:text="@string/myGoal"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -176,33 +190,32 @@
         app:layout_constraintTop_toBottomOf="@+id/momentText" />
 
     <View
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
         android:layout_width="140dp"
         android:layout_height="3dp"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
         android:background="@color/grey"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goalTitle" />
 
     <TextView
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
         android:id="@+id/goalText"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
-        android:text=""
+        android:layout_marginEnd="20dp"
+        android:layout_marginStart="20dp"
+        android:text="목표에요"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goalTitle"/>
 
     <TextView
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
         android:id="@+id/resolveTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:text="@string/myResolve"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -210,23 +223,22 @@
         app:layout_constraintTop_toBottomOf="@+id/goalText"/>
 
     <View
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
         android:layout_width="140dp"
         android:layout_height="3dp"
         android:background="@color/grey"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resolveTitle"/>
 
     <TextView
-        android:layout_marginEnd="20dp"
-        android:layout_marginStart="20dp"
         android:id="@+id/resolveText"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
-        android:text=""
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="각오에요"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resolveTitle"/>
 
