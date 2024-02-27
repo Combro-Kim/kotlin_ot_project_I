@@ -6,12 +6,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    android:layout_margin="20dp"
+    android:padding="20dp"
     tools:context=".PersonalIntroduceActivity">
 
     <include
         layout = "@layout/toolbar"
-        android:id = "@+id/toolbar"/>
+        android:id = "@+id/personal_toolbar"/>
 
     <ImageView
         android:id="@+id/iv_personal"
@@ -19,7 +19,7 @@
         android:layout_height="230dp"
         android:src="@drawable/people"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/personal_toolbar" />
 
     <TextView
         android:id="@+id/personalNameTitle"
@@ -30,7 +30,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/iv_personal"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/personal_toolbar" />
 
     <TextView
         android:id="@+id/personalNameText"
