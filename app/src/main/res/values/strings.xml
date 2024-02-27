@@ -4,4 +4,10 @@
     <string name="moment">지원 계기</string>
     <string name="myGoal">나의 목표</string>
     <string name="myResolve">나의 각오</string>
+    <string name="memberIntroduce">팀원 소개</string>
+    <string name="projectIntroduce">프로젝트 소개</string>
+    <string name="projectText"> 팀원들의 소개를 목적으로 지금까지 배운 기능인 ViewPager, LinearLayOut과 처음 사용하는 기능인 \nScrollView, RecyclerView 등을 사용해 만든 자기 소개 애플리케이션 입니다. </string>
+    <string name="teamText">
+        "안드로이드 개발자를 꿈꾸며 안드로이드 과정 3기에 지원한 개발자 꿈나무들이 모여 만든 팀입니다.\n안드로이드에 관심있다는 공통점 말고도 모두 MBTI가 I로 시작하는 공통점이 있어 1조를 대신해 I조로 팀 명을 정하게 되었습니다." </string>
+    <string name="back_button">BACK BUTTON</string>
 </resources>

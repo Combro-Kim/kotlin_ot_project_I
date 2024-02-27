@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="55dp"
+    android:background="#838383"
+    >
+    <ImageView
+        android:id="@+id/returnBtn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@android:drawable/ic_menu_revert"
+        android:contentDescription="@string/back_button" />
+</androidx.appcompat.widget.Toolbar>

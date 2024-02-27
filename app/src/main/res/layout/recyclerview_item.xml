@@ -45,4 +45,6 @@
         app:layout_constraintTop_toBottomOf="@id/birthdayTextView"
         tools:text="MBTI" />
 
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
