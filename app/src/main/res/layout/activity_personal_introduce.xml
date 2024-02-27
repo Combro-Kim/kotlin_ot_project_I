@@ -39,7 +39,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:text="홍길동"
+        android:text=""
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/iv_personal"
         app:layout_constraintTop_toTopOf="@+id/personalNameTitle" />
@@ -62,7 +62,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:text="24.02.26"
+        android:text=""
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/iv_personal"
         app:layout_constraintTop_toTopOf="@+id/birthdayTitle" />
@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:text="INFJ"
+        android:text=""
         android:textSize="14sp"
         app:layout_constraintStart_toEndOf="@+id/iv_personal"
         app:layout_constraintTop_toTopOf="@+id/personalMbtiTitle" />
@@ -96,7 +96,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        android:text="취미"
+        android:text=""
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/iv_personal"
@@ -144,7 +144,7 @@
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
-        android:text="지원계기에요"
+        android:text=""
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/momentTitle" />
@@ -176,7 +176,7 @@
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
-        android:text="목표에요"
+        android:text=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goalTitle"/>
 
@@ -207,7 +207,7 @@
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
-        android:text="각오에요"
+        android:text=""
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resolveTitle"/>
 
