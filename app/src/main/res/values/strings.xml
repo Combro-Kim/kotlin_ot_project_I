@@ -7,4 +7,23 @@
     <string name="teamText">
         "안드로이드 개발자를 꿈꾸며 안드로이드 과정 3기에 지원한 개발자 꿈나무들이 모여 만든 팀입니다.\n안드로이드에 관심있다는 공통점 말고도 모두 MBTI가 I로 시작하는 공통점이 있어 1조를 대신해 I조로 팀 명을 정하게 되었습니다." </string>
     <string name="back_button">BACK BUTTON</string>
+
+
+    <string name="name1"> 홍길동1 </string>
+    <string name="region1"> 지역 </string>
+    <string name="birthday1"> 99.99.99 </string>
+    <string name="mbti1"> MBTI </string>
+    <string name="name2"> 홍길동2 </string>
+    <string name="region2"> 지역 </string>
+    <string name="birthday2"> 99.99.99 </string>
+    <string name="mbti2"> MBTI </string>
+    <string name="name3"> 홍길동3 </string>
+    <string name="region3"> 지역 </string>
+    <string name="birthday3"> 99.99.99 </string>
+    <string name="mbti3"> MBTI </string>
+    <string name="name4"> 홍길동4 </string>
+    <string name="region4"> 지역 </string>
+    <string name="birthday4"> 99.99.99 </string>
+    <string name="mbti4"> MBTI </string>
+
 </resources>

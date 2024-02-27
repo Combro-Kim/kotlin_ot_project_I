@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.types.expressions.FunctionWithBigAritySupport
+
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
@@ -29,6 +31,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    dataBinding{
+        enable
     }
 }
 

@@ -60,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="35dp"
                 android:layout_marginTop="45dp"
-                android:text="@string/memberIntroduce" />
+                android:text="@string/teamIntroduce" />
 
             <View
                 android:layout_width="match_parent"
@@ -73,6 +73,7 @@
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+
                 android:layout_margin="30dp"/>
 
 

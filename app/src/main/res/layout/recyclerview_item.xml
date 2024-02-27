@@ -2,47 +2,64 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="180dp">
+    android:id="@+id/box"
+    android:layout_width="180dp"
+    android:layout_height="240dp"
+    
+    >
 
 
     <ImageView
         android:id="@+id/personImageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:layout_marginStart="10dp"
+        android:layout_marginBottom="25dp"
         android:src="@drawable/dd"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintBottom_toBottomOf="@id/box"
+        app:layout_constraintEnd_toEndOf="@id/box"
+        app:layout_constraintStart_toStartOf="@+id/box"
+        app:layout_constraintTop_toTopOf="@+id/box" />
 
     <TextView
         android:id="@+id/nameTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
-        app:layout_constraintStart_toEndOf="@id/personImageView"
-        app:layout_constraintTop_toTopOf="@id/personImageView"
-        tools:text="이름" />
+        app:layout_constraintEnd_toEndOf="@+id/personImageView"
+        app:layout_constraintStart_toStartOf="@+id/personImageView"
+        app:layout_constraintTop_toBottomOf="@+id/personImageView"
+        tools:text="@string/name1" />
 
     <TextView
         android:id="@+id/birthdayTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="10dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toEndOf="@id/personImageView"
-        app:layout_constraintTop_toBottomOf="@id/nameTextView"
-        tools:text="생년월일" />
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/box"
+        app:layout_constraintStart_toStartOf="@id/box"
+        tools:text="@string/birthday1" />
 
     <TextView
         android:id="@+id/mbtiTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="15dp"
         android:layout_marginTop="10dp"
-        app:layout_constraintStart_toEndOf="@id/personImageView"
-        app:layout_constraintTop_toBottomOf="@id/birthdayTextView"
-        tools:text="MBTI" />
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/box"
+        app:layout_constraintStart_toEndOf="@id/birthdayTextView"
+        tools:text="@string/mbti1" />
+
+    <TextView
+        android:id="@+id/regionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+        app:layout_constraintBottom_toBottomOf="@+id/box"
+        app:layout_constraintStart_toEndOf="@id/mbtiTextView"
+        tools:text="@string/region1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
