@@ -13,9 +13,9 @@
         android:theme="@style/Theme.Kotlin_ot_project_I"
         >
         <activity android:name=".TeamActivity"
-            android:exported="true"/>
+            android:exported="false"/>
         <activity
-            android:name=".PersonalIntroduceActivity"
+            android:name=".PersonalActivity"
             android:exported="false" />
         <activity
             android:name=".IntroduceActivity"

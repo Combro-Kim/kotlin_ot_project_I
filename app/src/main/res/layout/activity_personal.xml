@@ -15,10 +15,12 @@
     <ImageView
         android:id="@+id/iv_personal"
         android:layout_width="190dp"
-        android:layout_height="230dp"
-        android:layout_marginTop="20dp"
+        android:layout_height="210dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
         android:src="@drawable/people"
+        android:background="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/personal_toolbar" />
 
@@ -70,6 +72,7 @@
 
     <TextView
         android:id="@+id/mbtiTitle"
+        android:layout_marginEnd="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -133,7 +136,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
-        android:text="잠자기"
+        android:text="팀원"
         android:textSize="14sp"
         android:textStyle="normal"
         app:layout_constraintStart_toEndOf="@+id/iv_personal"
@@ -156,20 +159,21 @@
     <View
         android:layout_width="140dp"
         android:layout_height="3dp"
-        android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp"
         android:background="@color/grey"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/momentTitle" />
 
     <TextView
+
         android:id="@+id/momentText"
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:text="안드로이드 앱 개발을 하기위해 지원했습니다 반갑습니다. 감사합니다 사랑합니다. 잘봐주세요. 앞으로 열심히 하겠습니다. 사실 뭐가 뭔지 모르겠습니다. 살려주세요."
+        android:layout_marginStart="20dp"
+        android:text="지원계기에요"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/momentTitle" />
@@ -200,9 +204,9 @@
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:text="안드로이드 앱 개발을 하기위해 지원했습니다 반갑습니다. 감사합니다 사랑합니다. 잘봐주세요. 앞으로 열심히 하겠습니다. 사실 뭐가 뭔지 모르겠습니다. 살려주세요."
+        android:layout_marginStart="20dp"
+        android:text="목표에요"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goalTitle"/>
 
@@ -212,6 +216,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:text="@string/myResolve"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -234,7 +239,7 @@
         android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:text="안드로이드 앱 개발을 하기위해 지원했습니다 반갑습니다. 감사합니다 사랑합니다. 잘봐주세요. 앞으로 열심히 하겠습니다. 사실 뭐가 뭔지 모르겠습니다. 살려주세요."
+        android:text="각오에요"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/resolveTitle"/>
 
