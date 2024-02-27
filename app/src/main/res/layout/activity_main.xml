@@ -172,7 +172,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="김재혁"
+        android:text="임채명"
         app:layout_constraintEnd_toEndOf="@+id/imageButton4"
         app:layout_constraintStart_toStartOf="@+id/imageButton4"
         app:layout_constraintTop_toBottomOf="@+id/imageButton4" />
@@ -181,7 +181,7 @@
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="000000/MBTI/지역"
+        android:text="910318/INFJ/인천"
         app:layout_constraintEnd_toEndOf="@+id/textView4"
         app:layout_constraintStart_toStartOf="@+id/textView4"
         app:layout_constraintTop_toBottomOf="@+id/textView4" />

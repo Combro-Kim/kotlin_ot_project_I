@@ -30,7 +30,7 @@ class PersonalActivity : AppCompatActivity() {
         R.string.birthday3,
         R.string.birthday4
     )
-    private val workOfTeam = listOf(
+    private val roleOfTeam = listOf(
         R.string.work1,
         R.string.work2,
         R.string.work3,
@@ -69,6 +69,7 @@ class PersonalActivity : AppCompatActivity() {
         binding.momentText.text = getString(momentOfTeam[idx])
         binding.goalText.text = getString(goalOfTeam[idx])
         binding.resolveText.text = getString(resolveOfTeam[idx])
+        binding.roleText.text = getString(roleOfTeam[idx])
 
         binding.personalToolbar.returnBtn.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
