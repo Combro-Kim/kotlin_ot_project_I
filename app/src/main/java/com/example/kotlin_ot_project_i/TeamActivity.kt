@@ -9,7 +9,6 @@ class TeamActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTeamBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_team)
         binding = ActivityTeamBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

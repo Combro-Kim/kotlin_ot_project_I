@@ -7,7 +7,53 @@
     <string name="memberIntroduce">팀원 소개</string>
     <string name="projectIntroduce">프로젝트 소개</string>
     <string name="projectText"> 팀원들의 소개를 목적으로 지금까지 배운 기능인 ViewPager, LinearLayOut과 처음 사용하는 기능인 \nScrollView, RecyclerView 등을 사용해 만든 자기 소개 애플리케이션 입니다. </string>
-    <string name="teamText">
-        "안드로이드 개발자를 꿈꾸며 안드로이드 과정 3기에 지원한 개발자 꿈나무들이 모여 만든 팀입니다.\n안드로이드에 관심있다는 공통점 말고도 모두 MBTI가 I로 시작하는 공통점이 있어 1조를 대신해 I조로 팀 명을 정하게 되었습니다." </string>
+    <string name="teamText">안드로이드 개발자를 꿈꾸며 안드로이드 과정 3기에 지원한 개발자 꿈나무들이 모여 만든 팀입니다.\n안드로이드에 관심있다는 공통점 말고도 모두 MBTI가 I로 시작하는 공통점이 있어 1조를 대신해 I조로 팀 명을 정하게 되었습니다. </string>
     <string name="back_button">BACK BUTTON</string>
+
+    <!-- \n 을 입력하면 줄바뀜-->
+
+
+    <!-- 김재현 -->
+    <string name="name1">김재현</string>
+    <string name="birthday1">97. 08. 02</string>
+    <string name="hobby1">헬스,농구,풋살</string>\
+    <string name="mbti1">ISTJ</string>
+    <string name="work1">팀장</string>
+    <string name="moment1">현업에 있는 형에게서 앱 개발에 관한 이야기를 들었고 흥미가 생겨 지원하게 되었습니다. 사실 저는 비전공자라 아는것보다 모르는게 더 많지만 다른 분야를 배워가면서 다른 팀원들과 함께 일하면서 무언가를 만들어낸다는 것에 흥미가 생겼고 최근에는 스마트폰을 안쓰는 사람을 찾기 더 힘들다는 생각과 그에 따른 앱에 수요도 늘어났다고 생각하여 앱 개발에 관하여 알고있으면 좋을 것 같다고 생각해 지원하게 되었습니다.</string>
+    <string name="goal1"></string>취업도 목표에 있지만 회사에 들어가서 다른 사람에게 피해주지 않는, 나아가 다른 팀원을 도와줄 수 있는 능력이 되는 그런 개발자가 되고 싶습니다.
+    <string name="resolve1"></string>힘들고 어려운 과정이겠지만 포기하지 않고 열심히 해보겠습니다!
+
+
+    <!-- 김재혁 -->
+    <string name="name2">김재혁</string>
+    <string name="birthday2">00. 00. 00</string>
+    <string name="hobby2">취미에요</string>\
+    <string name="mbti2">INFP</string>
+    <string name="work2">팀원</string>
+    <string name="moment2"></string>
+    <string name="goal2"></string>
+    <string name="resolve2"></string>
+
+
+    <!-- 임채명 -->
+    <string name="name3">임채명</string>
+    <string name="birthday3">00. 00. 00</string>
+    <string name="hobby3">취미에요</string>\
+    <string name="mbti3">INFP</string>
+    <string name="work3">팀원</string>
+    <string name="moment3"></string>
+    <string name="goal3"></string>
+    <string name="resolve3"></string>
+
+
+    <!-- 이성민 -->
+    <string name="name4">이성민</string>
+    <string name="birthday4">98. 01. 18</string>
+    <string name="hobby4">프라모델 만들기</string>\
+    <string name="mbti4">INFP</string>
+    <string name="work4">팀원</string>
+    <string name="moment4"></string>
+    <string name="goal4"></string>
+    <string name="resolve4"></string>
+    
 </resources>
