@@ -37,7 +37,6 @@
         android:layout_marginTop="20dp"
         android:text="홍길동"
         android:textSize="14sp"
-        android:textStyle="normal"
         app:layout_constraintStart_toEndOf="@+id/personalImageView"
         app:layout_constraintTop_toTopOf="@+id/personalName" />
 
@@ -61,7 +60,6 @@
         android:layout_marginTop="20dp"
         android:text="24.02.26"
         android:textSize="14sp"
-        android:textStyle="normal"
         app:layout_constraintStart_toEndOf="@+id/personalImageView"
         app:layout_constraintTop_toTopOf="@+id/birthDay" />
 
@@ -85,7 +83,6 @@
         android:layout_marginTop="20dp"
         android:text="INFJ"
         android:textSize="14sp"
-        android:textStyle="normal"
         app:layout_constraintStart_toEndOf="@+id/personalImageView"
         app:layout_constraintTop_toTopOf="@+id/personalMbti" />
 
@@ -138,7 +135,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:maxLines="3"
         android:text="안드로이드 앱 개발을 하기위해 지원했습니다 반갑습니다. 감사합니다 사랑합니다. 잘봐주세요. 앞으로 열심히 하겠습니다. 사실 뭐가 뭔지 모르겠습니다. 살려주세요."
         android:textSize="15sp"
         android:textStyle="normal"
@@ -170,7 +166,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:maxLines="3"
         android:text="안드로이드 앱 개발을 하기위해 지원했습니다 반갑습니다. 감사합니다 사랑합니다. 잘봐주세요. 앞으로 열심히 하겠습니다. 사실 뭐가 뭔지 모르겠습니다. 살려주세요."
         android:textSize="15sp"
         android:textStyle="normal"
@@ -201,10 +196,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:maxLines="3"
         android:text="안드로이드 앱 개발을 하기위해 지원했습니다 반갑습니다. 감사합니다 사랑합니다. 잘봐주세요. 앞으로 열심히 하겠습니다. 사실 뭐가 뭔지 모르겠습니다. 살려주세요."
         android:textSize="15sp"
-        android:textStyle="normal"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/myResolveTitle"/>
 
