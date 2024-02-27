@@ -6,7 +6,7 @@
     android:background="#838383"
     >
     <ImageView
-        android:id="@+id/returnBtn"
+        android:id="@+id/return_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@android:drawable/ic_menu_revert"
