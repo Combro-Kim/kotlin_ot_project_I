@@ -15,6 +15,8 @@ class PersonalActivity : AppCompatActivity() {
         val idx = intent.getIntExtra("indexNumber", 0)
 
         /*binding.viewPager.adapter = ViewPagerAdapter(getImageList())*/
+
+
         binding.viewPager.adapter = if (idx == 0) {
             ViewPagerAdapter(getImageList1())
         } else if (idx == 1) {
