@@ -15,8 +15,8 @@
 
     <ImageView
         android:id="@+id/iv_personal"
-        android:layout_width="190dp"
-        android:layout_height="210dp"
+        android:layout_width="200dp"
+        android:layout_height="240dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
@@ -144,24 +144,23 @@
         app:layout_constraintTop_toTopOf="@+id/roleTitle" />
 
 
-
     <TextView
         android:id="@+id/momentTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
         android:text="@string/moment"
-        android:layout_marginStart="20dp"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/iv_personal"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_personal" />
 
     <View
         android:layout_width="140dp"
         android:layout_height="3dp"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
         android:background="@color/grey"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/momentTitle" />
@@ -171,9 +170,9 @@
         android:id="@+id/momentText"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
         android:text="지원계기에요"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -194,8 +193,8 @@
     <View
         android:layout_width="140dp"
         android:layout_height="3dp"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
         android:background="@color/grey"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/goalTitle" />
@@ -204,12 +203,11 @@
         android:id="@+id/goalText"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="15dp"
         android:text="목표에요"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goalTitle"/>
+        app:layout_constraintTop_toBottomOf="@+id/goalTitle" />
 
     <TextView
         android:id="@+id/resolveTitle"
@@ -227,21 +225,20 @@
     <View
         android:layout_width="140dp"
         android:layout_height="3dp"
-        android:background="@color/grey"
-        android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/grey"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resolveTitle"/>
+        app:layout_constraintTop_toBottomOf="@+id/resolveTitle" />
 
     <TextView
         android:id="@+id/resolveText"
         android:layout_width="match_parent"
         android:layout_height="65dp"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
         android:text="각오에요"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/resolveTitle"/>
+        app:layout_constraintTop_toBottomOf="@+id/resolveTitle" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
