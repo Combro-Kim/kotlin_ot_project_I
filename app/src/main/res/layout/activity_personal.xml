@@ -13,6 +13,7 @@
         layout = "@layout/toolbar"
         android:id = "@+id/personal_toolbar"/>
 
+
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="190dp"
