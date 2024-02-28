@@ -18,6 +18,9 @@
             android:name=".TeamActivity"
             android:exported="false" />
         <activity
+            android:name=".CreditsActivity"
+            android:exported="false" />
+        <activity
             android:name=".PersonalActivity"
             android:exported="false" />
         <activity
