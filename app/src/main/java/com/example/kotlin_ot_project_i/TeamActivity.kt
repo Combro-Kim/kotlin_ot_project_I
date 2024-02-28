@@ -6,6 +6,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.PopupMenu
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
 import com.example.kotlin_ot_project_i.databinding.ActivityTeamBinding
 
@@ -20,6 +22,7 @@ class TeamActivity : AppCompatActivity() {
             val popupMenu = PopupMenu(applicationContext,it)
             menuInflater.inflate(R.menu.menu_pop_up,popupMenu.menu)
             popupMenu.show()
+
             popupMenu.setOnMenuItemClickListener{
                 when(it.itemId){
                     R.id.go_main -> {
@@ -59,6 +62,23 @@ class TeamActivity : AppCompatActivity() {
                         finish()
                         return@setOnMenuItemClickListener true
                     }
+                    R.id.themeMode -> {
+                        val items = arrayOf("라이트 모드", "다크 모드", "사용자 지정")
+                        val builder = AlertDialog.Builder(this)
+                            .setTitle("테마 변경")
+                            .setItems(items) { dialog, idx ->
+                                if (items[idx] == "라이트 모드") {
+                                    changeTheme(AppCompatDelegate.MODE_NIGHT_NO)
+                                } else if (items[idx] == "다크 모드") {
+                                    changeTheme(AppCompatDelegate.MODE_NIGHT_YES)
+                                } else {
+                                    changeTheme(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+                                }
+                            }
+                        builder.show()
+
+                        return@setOnMenuItemClickListener true
+                    }
                     else-> return@setOnMenuItemClickListener false
                 }
             }
@@ -83,6 +103,7 @@ class TeamActivity : AppCompatActivity() {
 
     }
 
+
     override fun onResume() {
         super.onResume()
         getDataUiUpdate()
@@ -98,7 +119,6 @@ class TeamActivity : AppCompatActivity() {
         }
     }
 
-
     private fun deleteData() {
         with(getSharedPreferences(User_Comment, MODE_PRIVATE).edit()) {
             clear()
@@ -106,5 +126,9 @@ class TeamActivity : AppCompatActivity() {
             getDataUiUpdate()
         }
         Toast.makeText(this, "데이터를 삭제했습니다.", Toast.LENGTH_SHORT).show()
+    }
+
+    private fun changeTheme(mode: Int) {
+        AppCompatDelegate.setDefaultNightMode(mode)
     }
 }

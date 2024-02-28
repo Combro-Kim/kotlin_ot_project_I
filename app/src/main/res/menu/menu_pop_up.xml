@@ -3,25 +3,28 @@
 
     <item
         android:id="@+id/go_main"
-        android:title="메인화면"/>
+        android:title="메인화면" />
     <item
         android:id="@+id/go_team"
-        android:title="팀 소개"/>
+        android:title="팀 소개" />
     <item
         android:id="@+id/go_member"
-        android:title="팀원 소개"
         android:enabled="false"
-        />
+        android:title="팀원 소개" />
     <item
         android:id="@+id/go_member1"
-        android:title="@string/name1"/>
+        android:title="@string/name1" />
     <item
         android:id="@+id/go_member2"
-        android:title="@string/name2"/>
+        android:title="@string/name2" />
     <item
         android:id="@+id/go_member3"
-        android:title="@string/name3"/>
+        android:title="@string/name3" />
     <item
         android:id="@+id/go_member4"
-        android:title="@string/name4"/>
+        android:title="@string/name4" />
+
+    <item
+        android:id="@+id/themeMode"
+        android:title="테마 변경" />
 </menu>
