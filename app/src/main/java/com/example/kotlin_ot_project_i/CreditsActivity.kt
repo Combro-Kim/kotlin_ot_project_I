@@ -7,32 +7,33 @@ import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import com.example.kotlin_ot_project_i.databinding.ActivityMainBinding
+import androidx.core.view.isVisible
+import com.example.kotlin_ot_project_i.databinding.ActivityCreditsBinding
 
-class MainActivity : AppCompatActivity() {
-    private lateinit var binding: ActivityMainBinding
+class CreditsActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityCreditsBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        installSplashScreen()
-        binding = ActivityMainBinding.inflate(layoutInflater)
+        binding = ActivityCreditsBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        binding.mainToolbar.menuBtn.setOnClickListener {
+        binding.creditBar.menuBtn.setOnClickListener {
             val popupMenu = PopupMenu(applicationContext, it)
             menuInflater.inflate(R.menu.menu_pop_up, popupMenu.menu)
             popupMenu.show()
             popupMenu.setOnMenuItemClickListener {
                 when (it.itemId) {
                     R.id.go_main -> {
-                        Toast.makeText(applicationContext, "이미 메인 화면입니다.", Toast.LENGTH_SHORT).show()
+                        val intent = Intent(this, MainActivity::class.java)
+                        startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
 
                     R.id.go_team -> {
                         val intent = Intent(this, TeamActivity::class.java)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
 
@@ -40,6 +41,7 @@ class MainActivity : AppCompatActivity() {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber", 0)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
 
@@ -47,6 +49,7 @@ class MainActivity : AppCompatActivity() {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber", 1)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
 
@@ -54,6 +57,7 @@ class MainActivity : AppCompatActivity() {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber", 2)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
 
@@ -61,6 +65,7 @@ class MainActivity : AppCompatActivity() {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber", 3)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
 
@@ -83,47 +88,24 @@ class MainActivity : AppCompatActivity() {
                     }
 
                     R.id.go_maker -> {
-                        val intent = Intent(this, CreditsActivity::class.java)
-                        startActivity(intent)
+                        Toast.makeText(applicationContext, "이미 CREDITS 화면 입니다.", Toast.LENGTH_SHORT)
+                            .show()
                         return@setOnMenuItemClickListener true
                     }
-                    else-> return@setOnMenuItemClickListener false
 
+                    else -> return@setOnMenuItemClickListener false
                 }
             }
-
         }
-
-        binding.teamIB.setOnClickListener {
-            val intent = Intent(this, TeamActivity::class.java)
-            startActivity(intent)
-        }
-        binding.memberIB1.setOnClickListener {
-            val intent = Intent(this, PersonalActivity::class.java)
-            intent.putExtra("indexNumber", 0)
-            startActivity(intent)
-        }
-        binding.memberIB2.setOnClickListener {
-            val intent = Intent(this, PersonalActivity::class.java)
-            intent.putExtra("indexNumber", 1)
-            startActivity(intent)
-        }
-        binding.memberIB3.setOnClickListener {
-            val intent = Intent(this, PersonalActivity::class.java)
-            intent.putExtra("indexNumber", 2)
-            startActivity(intent)
-        }
-        binding.memberIB4.setOnClickListener {
-            val intent = Intent(this, PersonalActivity::class.java)
-            intent.putExtra("indexNumber", 3)
-            startActivity(intent)
-
+        binding.creditBar.returnBtn.let {
+            it.isVisible = true
+            it.setOnClickListener {
+                finish()
+            }
         }
     }
 
     private fun changeTheme(mode: Int) {
         AppCompatDelegate.setDefaultNightMode(mode)
     }
-
-
 }
