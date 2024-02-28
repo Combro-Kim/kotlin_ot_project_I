@@ -28,8 +28,7 @@ class TeamActivity : AppCompatActivity() {
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_team -> {
-                        val intent = Intent(this, TeamActivity::class.java)
-                        startActivity(intent)
+                        Toast.makeText(applicationContext, "이미 팀 소개 화면입니다.", Toast.LENGTH_SHORT).show()
                         return@setOnMenuItemClickListener true
                     }
 
