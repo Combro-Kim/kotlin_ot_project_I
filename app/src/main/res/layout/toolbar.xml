@@ -1,13 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.appcompat.widget.Toolbar xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.appcompat.widget.Toolbar
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
-    android:layout_height="55dp"
-    android:background="@color/grey" >
+    android:layout_height="30dp"
+    android:background="@color/grey"
+    android:elevation="4dp"
+    app:contentInsetStart="15dp"
+    app:contentInsetEnd="11dp">
+    <ImageView
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_menu"
+        android:id="@+id/menu_btn"
+        />
     <ImageView
         android:id="@+id/return_btn"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:src="@android:drawable/ic_menu_revert"
-        android:contentDescription="@string/back_button" />
+        android:layout_width="30dp"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_return"
+        android:contentDescription="@string/back_button"
+        android:layout_gravity="end"
+        android:visibility="gone"
+        />
 </androidx.appcompat.widget.Toolbar>
