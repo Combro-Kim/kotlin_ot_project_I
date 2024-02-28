@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kotlin_ot_project_I">
         <activity
-            android:name=".addActivity"
+            android:name=".AddActivity"
             android:exported="false" />
         <activity
             android:name=".TeamActivity"
