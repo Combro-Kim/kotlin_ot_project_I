@@ -4,6 +4,8 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.PopupMenu
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
 import androidx.viewpager2.widget.ViewPager2
 import com.example.kotlin_ot_project_i.databinding.ActivityPersonalBinding
@@ -61,6 +63,31 @@ class PersonalActivity : AppCompatActivity() {
                         finish()
                         return@setOnMenuItemClickListener true
                     }
+
+                    R.id.themeMode -> {
+                        val items = arrayOf("라이트 모드", "다크 모드", "사용자 지정")
+                        val builder = AlertDialog.Builder(this)
+                            .setTitle("테마 변경")
+                            .setItems(items) { dialog, idx ->
+                                if (items[idx] == "라이트 모드") {
+                                    changeTheme(AppCompatDelegate.MODE_NIGHT_NO)
+                                } else if (items[idx] == "다크 모드") {
+                                    changeTheme(AppCompatDelegate.MODE_NIGHT_YES)
+                                } else {
+                                    changeTheme(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
+                                }
+                            }
+                        builder.show()
+
+                        return@setOnMenuItemClickListener true
+                    }
+
+                    R.id.go_maker -> {
+                        val intent = Intent(this, CreditsActivity::class.java)
+                        startActivity(intent)
+                        return@setOnMenuItemClickListener true
+                    }
+
                     else-> return@setOnMenuItemClickListener false
                 }
             }
@@ -108,7 +135,7 @@ class PersonalActivity : AppCompatActivity() {
     }
 
     private fun getImageList3(): ArrayList<Int> {
-        return arrayListOf<Int>(R.drawable.pic3, R.drawable.pic3, R.drawable.pic3)
+        return arrayListOf<Int>(R.drawable.pic3, R.drawable.pic3_2, R.drawable.pic3_3)
     }
 
     private fun getImageList4(): ArrayList<Int> {
@@ -164,4 +191,8 @@ class PersonalActivity : AppCompatActivity() {
         R.string.resolve3,
         R.string.resolve4
     )
+
+    private fun changeTheme(mode: Int) {
+        AppCompatDelegate.setDefaultNightMode(mode)
+    }
 }

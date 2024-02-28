@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="credits">CREDITS</string>
+    <string name="used">"사용된 것"</string>
+    <string name="reference">"제작 및 참조"</string>
+    <string name="maker">만든이\n
+        팀장: 김재현\n
+        팀원: 김재혁\n
+        팀원: 이성민\n
+        팀원: 임채명 </string>
+
+    <string name="skill">
+    RecyclerView\nViewPager2\nScrollView\nViewBinding\nWhen\nIf~else\nIntent\ndddddddd\nqenkwqe\nqwnkelqwe\nqnkeqwnlekqw\nqwneklnqwekl</string>
+    <string name="refer">
+    RecyclerView\nViewPager2\nScrollView\nViewBinding\nWhen\nIf~else\nIntent\ndddddddd\nqenkwqe\nqwnkelqwe\nqnkeqwnlekqw\nqwneklnqwekl</string>
+
+</resources>
