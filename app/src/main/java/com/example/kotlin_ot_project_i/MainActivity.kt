@@ -85,6 +85,7 @@ class MainActivity : AppCompatActivity() {
                     R.id.go_maker -> {
                         val intent = Intent(this, CreditsActivity::class.java)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     else-> return@setOnMenuItemClickListener false
