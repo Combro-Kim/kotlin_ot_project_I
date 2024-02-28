@@ -3,9 +3,62 @@ package com.example.kotlin_ot_project_i
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.viewpager2.widget.ViewPager2
 import com.example.kotlin_ot_project_i.databinding.ActivityPersonalBinding
 
 class PersonalActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityPersonalBinding
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        binding = ActivityPersonalBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        val idx = intent.getIntExtra("indexNumber", 0)
+
+        /*binding.viewPager.adapter = ViewPagerAdapter(getImageList())*/
+        binding.viewPager.adapter = if (idx == 0) {
+            ViewPagerAdapter(getImageList1())
+        } else if (idx == 1) {
+            ViewPagerAdapter(getImageList2())
+        } else if (idx == 2) {
+            ViewPagerAdapter(getImageList3())
+        } else {
+            ViewPagerAdapter(getImageList4())
+        }
+
+        binding.viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        binding.personalNameText.text = getString(nameOfTeam[idx])
+        binding.hobbyText.text = getString(hobbyOfTeam[idx])
+        binding.mbtiText.text = getString(mbtiOfTeam[idx])
+        binding.birthdayText.text = getString(birthdayOfTeam[idx])
+        binding.momentText.text = getString(momentOfTeam[idx])
+        binding.goalText.text = getString(goalOfTeam[idx])
+        binding.resolveText.text = getString(resolveOfTeam[idx])
+        binding.roleText.text = getString(roleOfTeam[idx])
+
+        binding.personalToolbar.returnBtn.setOnClickListener {
+            val intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+    }
+
+    private fun getImageList1(): ArrayList<Int> {
+        return arrayListOf<Int>(R.drawable.pic1, R.drawable.pic1, R.drawable.pic1)
+    }
+
+    private fun getImageList2(): ArrayList<Int> {
+        return arrayListOf<Int>(R.drawable.pic2, R.drawable.pic2, R.drawable.pic2)
+    }
+
+    private fun getImageList3(): ArrayList<Int> {
+        return arrayListOf<Int>(R.drawable.pic3, R.drawable.pic3, R.drawable.pic3)
+    }
+
+    private fun getImageList4(): ArrayList<Int> {
+        return arrayListOf<Int>(R.drawable.pic4, R.drawable.pic4, R.drawable.pic4)
+    }
+
+    //todo
     private val nameOfTeam = listOf(
         R.string.name1,
         R.string.name2,
@@ -54,27 +107,4 @@ class PersonalActivity : AppCompatActivity() {
         R.string.resolve3,
         R.string.resolve4
     )
-    private lateinit var binding: ActivityPersonalBinding
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        binding = ActivityPersonalBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        val idx = intent.getIntExtra("indexNumber",0)
-
-        binding.ivPersonal.setImageResource(resources.getIdentifier("pic${idx+1}","drawable",packageName))
-        binding.personalNameText.text = getString(nameOfTeam[idx])
-        binding.hobbyText.text = getString(hobbyOfTeam[idx])
-        binding.mbtiText.text = getString(mbtiOfTeam[idx])
-        binding.birthdayText.text = getString(birthdayOfTeam[idx])
-        binding.momentText.text = getString(momentOfTeam[idx])
-        binding.goalText.text = getString(goalOfTeam[idx])
-        binding.resolveText.text = getString(resolveOfTeam[idx])
-        binding.roleText.text = getString(roleOfTeam[idx])
-
-        binding.personalToolbar.returnBtn.setOnClickListener{
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-
-        }
-    }
 }
