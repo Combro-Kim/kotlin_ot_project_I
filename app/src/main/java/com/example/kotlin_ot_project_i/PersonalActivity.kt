@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.PopupMenu
+import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.view.isVisible
@@ -36,31 +37,43 @@ class PersonalActivity : AppCompatActivity() {
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member1 -> {
-                        val intent = Intent(this, PersonalActivity::class.java)
-                        intent.putExtra("indexNumber",0)
-                        startActivity(intent)
-                        finish()
+                        if(intent.getIntExtra("indexNumber",0) == 0) Toast.makeText(applicationContext,"이미 보고 있는 팀원입니다.",Toast.LENGTH_SHORT).show()
+                        else {
+                            val intent = Intent(this, PersonalActivity::class.java)
+                            intent.putExtra("indexNumber", 0)
+                            startActivity(intent)
+                            finish()
+                        }
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member2 -> {
-                        val intent = Intent(this, PersonalActivity::class.java)
-                        intent.putExtra("indexNumber",1)
-                        startActivity(intent)
-                        finish()
+                        if(intent.getIntExtra("indexNumber",0) == 1) Toast.makeText(applicationContext,"이미 보고 있는 팀원입니다.",Toast.LENGTH_SHORT).show()
+                        else {
+                            val intent = Intent(this, PersonalActivity::class.java)
+                            intent.putExtra("indexNumber", 1)
+                            startActivity(intent)
+                            finish()
+                        }
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member3 -> {
-                        val intent = Intent(this, PersonalActivity::class.java)
-                        intent.putExtra("indexNumber",2)
-                        startActivity(intent)
-                        finish()
+                        if(intent.getIntExtra("indexNumber",0) == 2) Toast.makeText(applicationContext,"이미 보고 있는 팀원입니다.",Toast.LENGTH_SHORT).show()
+                        else {
+                            val intent = Intent(this, PersonalActivity::class.java)
+                            intent.putExtra("indexNumber", 2)
+                            startActivity(intent)
+                            finish()
+                        }
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member4 -> {
-                        val intent = Intent(this, PersonalActivity::class.java)
-                        intent.putExtra("indexNumber",3)
-                        startActivity(intent)
-                        finish()
+                        if(intent.getIntExtra("indexNumber",0) == 3) Toast.makeText(applicationContext,"이미 보고 있는 팀원입니다.",Toast.LENGTH_SHORT).show()
+                        else {
+                            val intent = Intent(this, PersonalActivity::class.java)
+                            intent.putExtra("indexNumber", 3)
+                            startActivity(intent)
+                            finish()
+                        }
                         return@setOnMenuItemClickListener true
                     }
 

@@ -12,17 +12,20 @@ import androidx.core.view.isVisible
 import com.example.kotlin_ot_project_i.databinding.ActivityTeamBinding
 
 class TeamActivity : AppCompatActivity() {
+    companion object{
+        lateinit var teamActivity: TeamActivity
+    }
+
     private lateinit var binding: ActivityTeamBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTeamBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        teamActivity = this
         binding.teamToolbar.menuBtn.setOnClickListener{
             val popupMenu = PopupMenu(applicationContext,it)
             menuInflater.inflate(R.menu.menu_pop_up,popupMenu.menu)
             popupMenu.show()
-
             popupMenu.setOnMenuItemClickListener{
                 when(it.itemId){
                     R.id.go_main -> {
