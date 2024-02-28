@@ -5,90 +5,199 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/white"
-    tools:context=".IntroduceActivity">
+    tools:context=".TeamActivity">
 
     <include
         android:id="@+id/team_toolbar"
-        layout="@layout/toolbar"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="1dp" />
+        layout="@layout/toolbar" />
 
-    <LinearLayout
+
+    <TextView
+        android:id="@+id/titleTextView1"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="70dp"
+        android:text="@string/teamIntroduce"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/line1"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView1"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="35dp"
-        android:orientation="vertical"
+        android:layout_height="3dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:background="@color/grey" />
+
+
+    <ImageView
+        android:id="@+id/teamImageView"
+        app:layout_constraintTop_toBottomOf="@id/line1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:importantForAccessibility="no"
+        android:src="@drawable/dd"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="190dp" />
+
+
+    <TextView
+        android:id="@+id/teamIntroduceTextView"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintTop_toBottomOf="@id/teamImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="6"
+        android:text="@string/teamText"
+        android:textSize="14.5sp" />
+
+    <TextView
+        android:id="@+id/titleTExtView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="내가 본 팀원들"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/titleTextView1"
+        app:layout_constraintTop_toBottomOf="@id/teamIntroduceTextView"
+        android:layout_marginTop="30dp"/>
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="3dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        app:layout_constraintTop_toBottomOf="@id/titleTExtView2"
+        android:background="@color/grey" />
+
+
+
+
+    <TextView
+        android:id="@+id/nameTextView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="40dp"
+        android:text="김재현"
+        android:textStyle="bold"
+        android:layout_marginTop="15dp"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/line2"
+        app:layout_constraintTop_toBottomOf="@id/line2"/>
+
+    <TextView
+        android:id="@+id/nameTextView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:text="김재혁"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/nameTextView1"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView1" />
+
+    <TextView
+        android:id="@+id/nameTextView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="40dp"
+        android:text="임채명"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/nameTextView1"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView2" />
+
+    <TextView
+        android:id="@+id/nameTextView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:text="이성민"
+        android:textStyle="bold"
+        android:textSize="15sp"
+        app:layout_constraintStart_toStartOf="@id/nameTextView1"
+        app:layout_constraintTop_toBottomOf="@id/nameTextView3" />
+
+    <TextView
+        android:id="@+id/valueTextView1"
+        android:layout_marginEnd="35dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/nameTextView1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nameTextView1" />
+
+    <TextView
+        android:id="@+id/valueTextView2"
+        android:layout_marginEnd="35dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/nameTextView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nameTextView2" />
+
+    <TextView
+        android:id="@+id/valueTextView3"
+        android:layout_marginEnd="35dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/nameTextView3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nameTextView3" />
+
+    <TextView
+        android:id="@+id/valueTextView4"
+        android:layout_marginEnd="35dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        app:layout_constraintBaseline_toBaselineOf="@id/nameTextView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/nameTextView4" />
+
+
+
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:clickable="true"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/team_toolbar"
-        tools:layout_editor_absoluteX="0dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/icon_add"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="45dp"
-            android:text="@string/teamIntroduce"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/deleteButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        android:clickable="true"
+        app:layout_constraintEnd_toStartOf="@id/addButton"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/baseline_delete_outline_24"
+        />
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_marginStart="35dp"
-            android:layout_marginEnd="35dp"
-            android:background="@color/grey" />
-
-        <ImageView
-            android:id="@+id/teamImageView"
-            android:layout_width="300dp"
-            android:layout_height="200dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/dd"
-            android:importantForAccessibility="no" />
-
-
-        <TextView
-            android:id="@+id/teamIntroduceTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="40dp"
-            android:ellipsize="end"
-            android:maxLines="6"
-            android:text="@string/teamText"
-            android:textSize="14.5sp"/>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="50dp"
-            android:text="@string/projectIntroduce"
-            android:textSize="20sp"
-            android:textStyle="bold"/>
-
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="3dp"
-            android:layout_marginStart="35dp"
-            android:layout_marginEnd="35dp"
-            android:background="@color/grey" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="40dp"
-            android:ellipsize="end"
-            android:text="@string/projectText"
-            android:textSize="14.5sp"
-            />
-
-    </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
