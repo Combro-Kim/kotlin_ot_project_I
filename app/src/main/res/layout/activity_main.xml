@@ -28,7 +28,7 @@
         android:id="@+id/view2"
         android:layout_width="160dp"
         android:layout_height="3dp"
-        android:layout_marginStart="20dp"
+        android:layout_marginStart="15dp"
         android:background="#A5A5A5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -37,6 +37,7 @@
 
     <ImageButton
         android:id="@+id/teamIB"
+        android:background="@drawable/pic99"
         android:layout_width="380dp"
         android:layout_height="170dp"
         android:layout_marginStart="20dp"
@@ -74,8 +75,7 @@
         android:id="@+id/view"
         android:layout_width="160dp"
         android:layout_height="3dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="400dp"
+        android:layout_marginStart="15dp"
         android:background="#A5A5A5"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

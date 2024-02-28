@@ -100,7 +100,7 @@ class PersonalActivity : AppCompatActivity() {
     }
 
     private fun getImageList1(): ArrayList<Int> {
-        return arrayListOf<Int>(R.drawable.pic1, R.drawable.pic1, R.drawable.pic1)
+        return arrayListOf<Int>(R.drawable.pic55, R.drawable.pic88, R.drawable.pic66)
     }
 
     private fun getImageList2(): ArrayList<Int> {
