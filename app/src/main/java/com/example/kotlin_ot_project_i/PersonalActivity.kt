@@ -4,9 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.PopupMenu
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatDelegate
+import androidx.core.view.isVisible
 import androidx.viewpager2.widget.ViewPager2
 import com.example.kotlin_ot_project_i.databinding.ActivityPersonalBinding
 
@@ -18,8 +16,6 @@ class PersonalActivity : AppCompatActivity() {
         setContentView(binding.root)
         val idx = intent.getIntExtra("indexNumber", 0)
 
-        /*binding.viewPager.adapter = ViewPagerAdapter(getImageList())*/
-
 
         binding.personalToolbar.menuBtn.setOnClickListener{
             val popupMenu = PopupMenu(applicationContext,it)
@@ -28,54 +24,41 @@ class PersonalActivity : AppCompatActivity() {
             popupMenu.setOnMenuItemClickListener{
                 when(it.itemId){
                     R.id.go_main -> {
-                        val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_team -> {
                         val intent = Intent(this, TeamActivity::class.java)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member1 -> {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber",0)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member2 -> {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber",1)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member3 -> {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber",2)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member4 -> {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber",3)
                         startActivity(intent)
-                        return@setOnMenuItemClickListener true
-                    }
-                    R.id.themeMode -> {
-                        val items = arrayOf("라이트 모드", "다크 모드", "사용자 지정")
-                        val builder = AlertDialog.Builder(this)
-                            .setTitle("테마 변경")
-                            .setItems(items) { dialog, idx ->
-                                if (items[idx] == "라이트 모드") {
-                                    changeTheme(AppCompatDelegate.MODE_NIGHT_NO)
-                                } else if (items[idx] == "다크 모드") {
-                                    changeTheme(AppCompatDelegate.MODE_NIGHT_YES)
-                                } else {
-                                    changeTheme(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-                                }
-                            }
-                        builder.show()
-
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     else-> return@setOnMenuItemClickListener false
@@ -108,14 +91,16 @@ class PersonalActivity : AppCompatActivity() {
         binding.resolveText.text = getString(resolveOfTeam[idx])
         binding.roleText.text = getString(roleOfTeam[idx])
 
-        binding.personalToolbar.returnBtn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+        binding.personalToolbar.returnBtn.let{
+            it.isVisible = true
+            it.setOnClickListener {
+                finish()
+            }
         }
     }
 
     private fun getImageList1(): ArrayList<Int> {
-        return arrayListOf<Int>(R.drawable.pic1, R.drawable.pic1, R.drawable.pic1)
+        return arrayListOf<Int>(R.drawable.pic55, R.drawable.pic88, R.drawable.pic66)
     }
 
     private fun getImageList2(): ArrayList<Int> {
@@ -128,10 +113,6 @@ class PersonalActivity : AppCompatActivity() {
 
     private fun getImageList4(): ArrayList<Int> {
         return arrayListOf<Int>(R.drawable.pic4, R.drawable.pic4, R.drawable.pic4)
-    }
-
-    private fun changeTheme(mode: Int) {
-        AppCompatDelegate.setDefaultNightMode(mode)
     }
 
     //todo
