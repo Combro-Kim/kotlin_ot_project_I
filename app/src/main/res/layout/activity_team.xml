@@ -43,6 +43,7 @@
         android:layout_gravity="center"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
+        android:layout_marginTop="15dp"
         android:importantForAccessibility="no"
         android:src="@drawable/pic99"
         app:layout_constraintEnd_toEndOf="parent"
@@ -182,7 +183,8 @@
         android:clickable="true"
         android:src="@drawable/icon_add"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:importantForAccessibility="no" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/deleteButton"
@@ -192,7 +194,8 @@
         android:clickable="true"
         android:src="@drawable/baseline_delete_outline_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/addButton" />
+        app:layout_constraintEnd_toStartOf="@id/addButton"
+        android:importantForAccessibility="no" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
