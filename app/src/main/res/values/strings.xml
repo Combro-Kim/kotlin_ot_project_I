@@ -26,13 +26,13 @@
 
     <!-- 김재혁 -->
     <string name="name2">김재혁</string>
-    <string name="birthday2">00. 00. 00</string>
-    <string name="hobby2">취미에요</string>
+    <string name="birthday2">98. 03. 22</string>
+    <string name="hobby2">자전거 타기</string>
     <string name="mbti2">INFP</string>
     <string name="work2">팀원</string>
-    <string name="moment2"></string>
-    <string name="goal2"></string>
-    <string name="resolve2"></string>
+    <string name="moment2">혼자 공부와 취업준비가 힘들어서 참여하게 되었습니다. 훌륭한 안드로이드 개발자가 되고 싶습니다!!</string>
+    <string name="goal2">기초를 탄탄하게 다지고, 매일 매일 배우는 것에 즐거움을 느끼는 개발자가 되고 싶습니다.</string>
+    <string name="resolve2">늦지 않았다는 생각으로 성실히 임하고 열심히 하겠습니다.</string>
 
 
     <!-- 임채명 -->

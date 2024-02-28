@@ -10,5 +10,4 @@
         android:layout_height="50dp"
         android:src="@android:drawable/ic_menu_revert"
         android:contentDescription="@string/back_button" />
-
 </androidx.appcompat.widget.Toolbar>
