@@ -24,37 +24,41 @@ class PersonalActivity : AppCompatActivity() {
             popupMenu.setOnMenuItemClickListener{
                 when(it.itemId){
                     R.id.go_main -> {
-                        val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_team -> {
                         val intent = Intent(this, TeamActivity::class.java)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member1 -> {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber",0)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member2 -> {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber",1)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member3 -> {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber",2)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member4 -> {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber",3)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     else-> return@setOnMenuItemClickListener false
@@ -90,8 +94,7 @@ class PersonalActivity : AppCompatActivity() {
         binding.personalToolbar.returnBtn.let{
             it.isVisible = true
             it.setOnClickListener {
-                val intent = Intent(this, MainActivity::class.java)
-                startActivity(intent)
+                finish()
             }
         }
     }

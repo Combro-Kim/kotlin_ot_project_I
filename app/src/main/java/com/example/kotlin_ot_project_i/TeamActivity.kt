@@ -23,8 +23,7 @@ class TeamActivity : AppCompatActivity() {
             popupMenu.setOnMenuItemClickListener{
                 when(it.itemId){
                     R.id.go_main -> {
-                        val intent = Intent(this, MainActivity::class.java)
-                        startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_team -> {
@@ -36,24 +35,28 @@ class TeamActivity : AppCompatActivity() {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber",0)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member2 -> {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber",1)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member3 -> {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber",2)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     R.id.go_member4 -> {
                         val intent = Intent(this, PersonalActivity::class.java)
                         intent.putExtra("indexNumber",3)
                         startActivity(intent)
+                        finish()
                         return@setOnMenuItemClickListener true
                     }
                     else-> return@setOnMenuItemClickListener false
@@ -67,8 +70,7 @@ class TeamActivity : AppCompatActivity() {
         binding.teamToolbar.returnBtn.let{
             it.isVisible = true
             it.setOnClickListener{
-                val intent = Intent(this@TeamActivity, MainActivity::class.java)
-                startActivity(intent)
+                finish()
             }
         }
         binding.addButton.setOnClickListener {
