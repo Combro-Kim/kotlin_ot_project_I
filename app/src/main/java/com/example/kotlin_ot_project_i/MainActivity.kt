@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, PersonalActivity::class.java)
             intent.putExtra("indexNumber", 3)
             startActivity(intent)
+
         }
     }
 }

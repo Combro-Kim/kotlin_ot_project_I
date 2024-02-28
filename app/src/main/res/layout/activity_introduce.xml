@@ -7,6 +7,7 @@
     android:background="@color/white"
     tools:context=".IntroduceActivity">
 
+
     <ScrollView
         android:id="@+id/ScrollView"
         android:layout_width="match_parent"

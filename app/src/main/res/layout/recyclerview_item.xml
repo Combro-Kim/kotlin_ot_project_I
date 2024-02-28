@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="180dp">
 
-
     <ImageView
         android:id="@+id/personImageView"
         android:layout_width="150dp"

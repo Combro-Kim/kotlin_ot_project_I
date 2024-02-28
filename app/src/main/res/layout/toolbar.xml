@@ -3,12 +3,12 @@
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="55dp"
-    android:background="@color/grey"
-    >
+    android:background="@color/grey" >
     <ImageView
         android:id="@+id/return_btn"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:src="@android:drawable/ic_menu_revert"
         android:contentDescription="@string/back_button" />
+
 </androidx.appcompat.widget.Toolbar>

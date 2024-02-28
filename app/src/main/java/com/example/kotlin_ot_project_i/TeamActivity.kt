@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.example.kotlin_ot_project_i.databinding.ActivityTeamBinding
 
+
 class TeamActivity : AppCompatActivity() {
     private lateinit var binding: ActivityTeamBinding
     override fun onCreate(savedInstanceState: Bundle?) {

@@ -74,6 +74,7 @@ class PersonalActivity : AppCompatActivity() {
         binding.personalToolbar.returnBtn.setOnClickListener{
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+
         }
     }
 }
