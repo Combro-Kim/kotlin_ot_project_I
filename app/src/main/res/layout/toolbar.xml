@@ -3,7 +3,7 @@
     android:id="@+id/toolbar"
     android:layout_width="match_parent"
     android:layout_height="55dp"
-    android:background="@color/grey"
+    android:background="#838383"
     >
     <ImageView
         android:id="@+id/return_btn"
