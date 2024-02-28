@@ -4,7 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.PopupMenu
-import android.widget.Toast
+import androidx.core.view.isVisible
 import androidx.viewpager2.widget.ViewPager2
 import com.example.kotlin_ot_project_i.databinding.ActivityPersonalBinding
 
@@ -16,7 +16,6 @@ class PersonalActivity : AppCompatActivity() {
         setContentView(binding.root)
         val idx = intent.getIntExtra("indexNumber", 0)
 
-        /*binding.viewPager.adapter = ViewPagerAdapter(getImageList())*/
 
         binding.personalToolbar.menuBtn.setOnClickListener{
             val popupMenu = PopupMenu(applicationContext,it)
@@ -88,9 +87,12 @@ class PersonalActivity : AppCompatActivity() {
         binding.resolveText.text = getString(resolveOfTeam[idx])
         binding.roleText.text = getString(roleOfTeam[idx])
 
-        binding.personalToolbar.returnBtn.setOnClickListener {
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+        binding.personalToolbar.returnBtn.let{
+            it.isVisible = true
+            it.setOnClickListener {
+                val intent = Intent(this, MainActivity::class.java)
+                startActivity(intent)
+            }
         }
     }
 
