@@ -73,10 +73,10 @@ class CreditsActivity : AppCompatActivity() {
                         val items = arrayOf("라이트 모드", "다크 모드", "사용자 지정")
                         val builder = AlertDialog.Builder(this)
                             .setTitle("테마 변경")
-                            .setItems(items) { dialog, idx ->
-                                if (items[idx] == "라이트 모드") {
+                            .setItems(items) { dialog, id ->
+                                if (items[id] == "라이트 모드") {
                                     changeTheme(AppCompatDelegate.MODE_NIGHT_NO)
-                                } else if (items[idx] == "다크 모드") {
+                                } else if (items[id] == "다크 모드") {
                                     changeTheme(AppCompatDelegate.MODE_NIGHT_YES)
                                 } else {
                                     changeTheme(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)

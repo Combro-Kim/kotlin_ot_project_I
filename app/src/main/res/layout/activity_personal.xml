@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -10,33 +9,47 @@
 
 
     <include
-        layout = "@layout/toolbar"
-        android:id = "@+id/personal_toolbar"/>
+        android:id="@+id/personal_toolbar"
+        layout="@layout/toolbar" />
 
 
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="190dp"
-        android:layout_height="245dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
-        android:src="@drawable/people"
-        android:background="@color/theme_layout_color"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_toolbar"/>
-
-
-<!--    <ImageView
-        android:id="@+id/iv_personal"
-        android:layout_width="200dp"
         android:layout_height="240dp"
         android:layout_marginStart="20dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/people"
+        android:background="@color/theme_layout_color"
+        android:src="@drawable/people"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/personal_toolbar" />-->
+        app:layout_constraintTop_toBottomOf="@+id/personal_toolbar" />
+
+    <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
+        android:id="@+id/dotsIndicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        app:dotsColor="@color/theme_layout_color"
+        app:dotsCornerRadius="8dp"
+        app:dotsSize="10dp"
+        app:layout_constraintBottom_toBottomOf="@id/viewPager"
+        app:layout_constraintEnd_toEndOf="@id/viewPager"
+        app:layout_constraintStart_toStartOf="@id/viewPager"
+        app:progressMode="true"
+        app:selectedDotColor="@color/theme_layout_color" />
+
+
+    <!--    <ImageView
+            android:id="@+id/iv_personal"
+            android:layout_width="200dp"
+            android:layout_height="240dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/people"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/personal_toolbar" />-->
 
     <TextView
         android:id="@+id/personalNameTitle"
@@ -48,7 +61,7 @@
         android:textSize="16sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@+id/viewPager"
-        app:layout_constraintTop_toBottomOf="@+id/personal_toolbar"/>
+        app:layout_constraintTop_toBottomOf="@+id/personal_toolbar" />
 
     <TextView
         android:id="@+id/personalNameText"
@@ -86,11 +99,11 @@
 
     <TextView
         android:id="@+id/mbtiTitle"
-        android:layout_marginEnd="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
+        android:layout_marginEnd="20dp"
         android:text="MBTI"
         android:textSize="16sp"
         android:textStyle="bold"
@@ -195,9 +208,8 @@
         android:id="@+id/goalTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:text="@string/myGoal"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -218,7 +230,6 @@
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="15dp"
         android:text="목표에요"
         app:layout_constraintStart_toStartOf="parent"
@@ -228,14 +239,14 @@
         android:id="@+id/resolveTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:text="@string/myResolve"
         android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/goalText"/>
+        app:layout_constraintTop_toBottomOf="@+id/goalText" />
 
     <View
         android:layout_width="140dp"
@@ -251,7 +262,6 @@
         android:layout_width="match_parent"
         android:layout_height="65dp"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="15dp"
         android:text="각오에요"
         app:layout_constraintStart_toStartOf="parent"

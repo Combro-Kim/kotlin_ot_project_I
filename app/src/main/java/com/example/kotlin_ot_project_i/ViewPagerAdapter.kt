@@ -18,7 +18,6 @@ class ViewPagerAdapter(imageList: ArrayList<Int>) : RecyclerView.Adapter<ViewPag
 
     inner class PagerViewHolder(parent: ViewGroup) : RecyclerView.ViewHolder
         (LayoutInflater.from(parent.context).inflate(R.layout.image_item, parent, false)){
-
         val imageList = itemView.findViewById<ImageView>(R.id.imageListView)!!
     }
 }
