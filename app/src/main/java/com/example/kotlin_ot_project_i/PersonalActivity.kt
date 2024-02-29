@@ -12,117 +12,31 @@ import androidx.viewpager2.widget.ViewPager2
 import com.example.kotlin_ot_project_i.databinding.ActivityPersonalBinding
 
 class PersonalActivity : AppCompatActivity() {
+
     private lateinit var binding: ActivityPersonalBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityPersonalBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        val idx = intent.getIntExtra("indexNumber", 0)
+
+        val idxOfToolbar = intent.getIntExtra("indexNumber", 0)
+        val popupMenu = PopupMenu(applicationContext,binding.personalToolbar.menuBtn)
+        menuInflater.inflate(R.menu.menu_pop_up, popupMenu.menu)
+        toolbarFun(binding.personalToolbar.menuBtn, this, popupMenu, this, 2, idx = idxOfToolbar)
+        returnFun(binding.personalToolbar.returnBtn,this)
 
 
-        binding.personalToolbar.menuBtn.setOnClickListener{
-            val popupMenu = PopupMenu(applicationContext,it)
-            menuInflater.inflate(R.menu.menu_pop_up,popupMenu.menu)
-            popupMenu.show()
-            popupMenu.setOnMenuItemClickListener{
-                when(it.itemId){
-                    R.id.go_main -> {
-                        finish()
-                        return@setOnMenuItemClickListener true
-                    }
-                    R.id.go_team -> {
-                        val intent = Intent(this, TeamActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                        return@setOnMenuItemClickListener true
-                    }
-                    R.id.go_member1 -> {
-                        if(intent.getIntExtra("indexNumber",0) == 0) Toast.makeText(applicationContext,"이미 보고 있는 팀원입니다.",Toast.LENGTH_SHORT).show()
-                        else {
-                            val intent = Intent(this, PersonalActivity::class.java)
-                            intent.putExtra("indexNumber", 0)
-                            startActivity(intent)
-                            finish()
-                        }
-                        return@setOnMenuItemClickListener true
-                    }
-                    R.id.go_member2 -> {
-                        if(intent.getIntExtra("indexNumber",0) == 1) Toast.makeText(applicationContext,"이미 보고 있는 팀원입니다.",Toast.LENGTH_SHORT).show()
-                        else {
-                            val intent = Intent(this, PersonalActivity::class.java)
-                            intent.putExtra("indexNumber", 1)
-                            startActivity(intent)
-                            finish()
-                        }
-                        return@setOnMenuItemClickListener true
-                    }
-                    R.id.go_member3 -> {
-                        if(intent.getIntExtra("indexNumber",0) == 2) Toast.makeText(applicationContext,"이미 보고 있는 팀원입니다.",Toast.LENGTH_SHORT).show()
-                        else {
-                            val intent = Intent(this, PersonalActivity::class.java)
-                            intent.putExtra("indexNumber", 2)
-                            startActivity(intent)
-                            finish()
-                        }
-                        return@setOnMenuItemClickListener true
-                    }
-                    R.id.go_member4 -> {
-                        if(intent.getIntExtra("indexNumber",0) == 3) Toast.makeText(applicationContext,"이미 보고 있는 팀원입니다.",Toast.LENGTH_SHORT).show()
-                        else {
-                            val intent = Intent(this, PersonalActivity::class.java)
-                            intent.putExtra("indexNumber", 3)
-                            startActivity(intent)
-                            finish()
-                        }
-                        return@setOnMenuItemClickListener true
-                    }
-
-                    R.id.themeMode -> {
-                        val items = arrayOf("라이트 모드", "다크 모드", "사용자 지정")
-                        val builder = AlertDialog.Builder(this)
-                            .setTitle("테마 변경")
-                            .setItems(items) { dialog, idx ->
-                                if (items[idx] == "라이트 모드") {
-                                    changeTheme(AppCompatDelegate.MODE_NIGHT_NO)
-                                } else if (items[idx] == "다크 모드") {
-                                    changeTheme(AppCompatDelegate.MODE_NIGHT_YES)
-                                } else {
-                                    changeTheme(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-                                }
-                            }
-                        builder.show()
-
-                        return@setOnMenuItemClickListener true
-                    }
-
-                    R.id.go_maker -> {
-                        val intent = Intent(this, CreditsActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                        return@setOnMenuItemClickListener true
-                    }
-
-                    else-> return@setOnMenuItemClickListener false
-                }
-            }
-
-        }
-
-
-
-
-
-        binding.viewPager.adapter = if (idx == 0) {
+        binding.viewPager.adapter = if (idxOfToolbar == 0) {
             val pagerAdapter = ViewPagerAdapter(getImageList1())
             binding.viewPager.adapter = pagerAdapter
             binding.dotsIndicator.attachTo(binding.viewPager)
             ViewPagerAdapter(getImageList1())
-        } else if (idx == 1) {
+        } else if (idxOfToolbar == 1) {
             val pagerAdapter = ViewPagerAdapter(getImageList2())
             binding.viewPager.adapter = pagerAdapter
             binding.dotsIndicator.attachTo(binding.viewPager)
             ViewPagerAdapter(getImageList2())
-        } else if (idx == 2) {
+        } else if (idxOfToolbar == 2) {
             val pagerAdapter = ViewPagerAdapter(getImageList3())
             binding.viewPager.adapter = pagerAdapter
             binding.dotsIndicator.attachTo(binding.viewPager)
@@ -135,21 +49,16 @@ class PersonalActivity : AppCompatActivity() {
         }
 
         binding.viewPager.orientation = ViewPager2.ORIENTATION_HORIZONTAL
-        binding.personalNameText.text = getString(nameOfTeam[idx])
-        binding.hobbyText.text = getString(hobbyOfTeam[idx])
-        binding.mbtiText.text = getString(mbtiOfTeam[idx])
-        binding.birthdayText.text = getString(birthdayOfTeam[idx])
-        binding.momentText.text = getString(momentOfTeam[idx])
-        binding.goalText.text = getString(goalOfTeam[idx])
-        binding.resolveText.text = getString(resolveOfTeam[idx])
-        binding.roleText.text = getString(roleOfTeam[idx])
+        binding.personalNameText.text = getString(nameOfTeam[idxOfToolbar])
+        binding.hobbyText.text = getString(hobbyOfTeam[idxOfToolbar])
+        binding.mbtiText.text = getString(mbtiOfTeam[idxOfToolbar])
+        binding.birthdayText.text = getString(birthdayOfTeam[idxOfToolbar])
+        binding.momentText.text = getString(momentOfTeam[idxOfToolbar])
+        binding.goalText.text = getString(goalOfTeam[idxOfToolbar])
+        binding.resolveText.text = getString(resolveOfTeam[idxOfToolbar])
+        binding.roleText.text = getString(roleOfTeam[idxOfToolbar])
 
-        binding.personalToolbar.returnBtn.let{
-            it.isVisible = true
-            it.setOnClickListener {
-                finish()
-            }
-        }
+
     }
 
     private fun getImageList1(): ArrayList<Int> {
@@ -217,8 +126,4 @@ class PersonalActivity : AppCompatActivity() {
         R.string.resolve3,
         R.string.resolve4
     )
-
-    private fun changeTheme(mode: Int) {
-        AppCompatDelegate.setDefaultNightMode(mode)
-    }
 }

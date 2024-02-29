@@ -12,96 +12,23 @@ import androidx.core.view.isVisible
 import com.example.kotlin_ot_project_i.databinding.ActivityTeamBinding
 
 class TeamActivity : AppCompatActivity() {
+
     companion object{
         lateinit var teamActivity: TeamActivity
     }
-
     private lateinit var binding: ActivityTeamBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTeamBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         teamActivity = this
-        binding.teamToolbar.menuBtn.setOnClickListener{
-            val popupMenu = PopupMenu(applicationContext,it)
-            menuInflater.inflate(R.menu.menu_pop_up,popupMenu.menu)
-            popupMenu.show()
-            popupMenu.setOnMenuItemClickListener{
-                when(it.itemId){
-                    R.id.go_main -> {
-                        finish()
-                        return@setOnMenuItemClickListener true
-                    }
-                    R.id.go_team -> {
-                        Toast.makeText(applicationContext, "이미 팀 소개 화면입니다.", Toast.LENGTH_SHORT).show()
-                        return@setOnMenuItemClickListener true
-                    }
 
-                    R.id.go_member1 -> {
-                        val intent = Intent(this, PersonalActivity::class.java)
-                        intent.putExtra("indexNumber",0)
-                        startActivity(intent)
-                        finish()
-                        return@setOnMenuItemClickListener true
-                    }
-                    R.id.go_member2 -> {
-                        val intent = Intent(this, PersonalActivity::class.java)
-                        intent.putExtra("indexNumber",1)
-                        startActivity(intent)
-                        finish()
-                        return@setOnMenuItemClickListener true
-                    }
-                    R.id.go_member3 -> {
-                        val intent = Intent(this, PersonalActivity::class.java)
-                        intent.putExtra("indexNumber",2)
-                        startActivity(intent)
-                        finish()
-                        return@setOnMenuItemClickListener true
-                    }
-                    R.id.go_member4 -> {
-                        val intent = Intent(this, PersonalActivity::class.java)
-                        intent.putExtra("indexNumber",3)
-                        startActivity(intent)
-                        finish()
-                        return@setOnMenuItemClickListener true
-                    }
-                    R.id.themeMode -> {
-                        val items = arrayOf("라이트 모드", "다크 모드", "사용자 지정")
-                        val builder = AlertDialog.Builder(this)
-                            .setTitle("테마 변경")
-                            .setItems(items) { dialog, idx ->
-                                if (items[idx] == "라이트 모드") {
-                                    changeTheme(AppCompatDelegate.MODE_NIGHT_NO)
-                                } else if (items[idx] == "다크 모드") {
-                                    changeTheme(AppCompatDelegate.MODE_NIGHT_YES)
-                                } else {
-                                    changeTheme(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM)
-                                }
-                            }
-                        builder.show()
+        val popupMenu = PopupMenu(applicationContext,binding.teamToolbar.menuBtn)
+        menuInflater.inflate(R.menu.menu_pop_up, popupMenu.menu)
+        toolbarFun(binding.teamToolbar.menuBtn, this, popupMenu, this, 1)
+        returnFun(binding.teamToolbar.returnBtn, this)
 
-                        return@setOnMenuItemClickListener true
-                    }
-                    R.id.go_maker -> {
-                        val intent = Intent(this, CreditsActivity::class.java)
-                        startActivity(intent)
-                        finish()
-                        return@setOnMenuItemClickListener true
-                    }
-                    else-> return@setOnMenuItemClickListener false
-                }
-            }
-
-        }
-
-
-
-        binding.teamToolbar.returnBtn.let{
-            it.isVisible = true
-            it.setOnClickListener{
-                finish()
-            }
-        }
         binding.addButton.setOnClickListener {
             val intent = Intent(this,AddActivity::class.java)
             startActivity(intent)
@@ -135,9 +62,5 @@ class TeamActivity : AppCompatActivity() {
             getDataUiUpdate()
         }
         Toast.makeText(this, "데이터를 삭제했습니다.", Toast.LENGTH_SHORT).show()
-    }
-
-    private fun changeTheme(mode: Int) {
-        AppCompatDelegate.setDefaultNightMode(mode)
     }
 }
