@@ -113,12 +113,24 @@ class PersonalActivity : AppCompatActivity() {
 
 
         binding.viewPager.adapter = if (idx == 0) {
+            val pagerAdapter = ViewPagerAdapter(getImageList1())
+            binding.viewPager.adapter = pagerAdapter
+            binding.dotsIndicator.attachTo(binding.viewPager)
             ViewPagerAdapter(getImageList1())
         } else if (idx == 1) {
+            val pagerAdapter = ViewPagerAdapter(getImageList2())
+            binding.viewPager.adapter = pagerAdapter
+            binding.dotsIndicator.attachTo(binding.viewPager)
             ViewPagerAdapter(getImageList2())
         } else if (idx == 2) {
+            val pagerAdapter = ViewPagerAdapter(getImageList3())
+            binding.viewPager.adapter = pagerAdapter
+            binding.dotsIndicator.attachTo(binding.viewPager)
             ViewPagerAdapter(getImageList3())
         } else {
+            val pagerAdapter = ViewPagerAdapter(getImageList4())
+            binding.viewPager.adapter = pagerAdapter
+            binding.dotsIndicator.attachTo(binding.viewPager)
             ViewPagerAdapter(getImageList4())
         }
 
