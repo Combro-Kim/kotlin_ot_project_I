@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
+
     <item
         android:id="@+id/go_main"
         android:title="메인화면" />
@@ -29,6 +30,9 @@
     <item
         android:id="@+id/go_calendar"
         android:title="일정 추가" />
+    <item
+        android:id="@+id/go_comment"
+        android:title="방명록" />
     <item
         android:id="@+id/go_maker"
         android:title="만든이" />

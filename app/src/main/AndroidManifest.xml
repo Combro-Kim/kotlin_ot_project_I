@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Kotlin_ot_project_I">
         <activity
+            android:name=".CommentActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddActivity"
             android:exported="false" />
         <activity

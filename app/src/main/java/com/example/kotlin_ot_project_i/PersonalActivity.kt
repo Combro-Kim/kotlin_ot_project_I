@@ -20,31 +20,23 @@ class PersonalActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         val idxOfToolbar = intent.getIntExtra("indexNumber", 0)
-        val popupMenu = PopupMenu(applicationContext,binding.personalToolbar.menuBtn)
+        val popupMenu = PopupMenu(applicationContext, binding.personalToolbar.menuBtn)
         menuInflater.inflate(R.menu.menu_pop_up, popupMenu.menu)
         toolbarFun(binding.personalToolbar.menuBtn, this, popupMenu, this, 2, idx = idxOfToolbar)
-        returnFun(binding.personalToolbar.returnBtn,this)
+        returnFun(binding.personalToolbar.returnBtn, this)
 
 
         binding.viewPager.adapter = if (idxOfToolbar == 0) {
-            val pagerAdapter = ViewPagerAdapter(getImageList1())
-            binding.viewPager.adapter = pagerAdapter
-            binding.dotsIndicator.attachTo(binding.viewPager)
+            indicator(getImageList1())
             ViewPagerAdapter(getImageList1())
         } else if (idxOfToolbar == 1) {
-            val pagerAdapter = ViewPagerAdapter(getImageList2())
-            binding.viewPager.adapter = pagerAdapter
-            binding.dotsIndicator.attachTo(binding.viewPager)
+            indicator(getImageList2())
             ViewPagerAdapter(getImageList2())
         } else if (idxOfToolbar == 2) {
-            val pagerAdapter = ViewPagerAdapter(getImageList3())
-            binding.viewPager.adapter = pagerAdapter
-            binding.dotsIndicator.attachTo(binding.viewPager)
+            indicator(getImageList3())
             ViewPagerAdapter(getImageList3())
         } else {
-            val pagerAdapter = ViewPagerAdapter(getImageList4())
-            binding.viewPager.adapter = pagerAdapter
-            binding.dotsIndicator.attachTo(binding.viewPager)
+            indicator(getImageList4())
             ViewPagerAdapter(getImageList4())
         }
 
@@ -59,6 +51,12 @@ class PersonalActivity : AppCompatActivity() {
         binding.roleText.text = getString(roleOfTeam[idxOfToolbar])
 
 
+    }
+
+    private fun indicator(list: ArrayList<Int>) {
+        val pagerAdapter = ViewPagerAdapter(list)
+        binding.viewPager.adapter = pagerAdapter
+        binding.dotsIndicator.attachTo(binding.viewPager)
     }
 
     private fun getImageList1(): ArrayList<Int> {

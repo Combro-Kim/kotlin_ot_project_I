@@ -33,7 +33,7 @@ fun returnFun(view: View, activity: Activity){
 }
 
 
-// pageNumber -> main: 0 team: 1 personal: 2 add: 3 credit: 4 calendar: 5
+// pageNumber -> main: 0 team: 1 personal: 2 add: 3 credit: 4 calendar: 5 comment: 6
 fun toolbarFun(menu:View, context: Context, popupMenu : PopupMenu, activity: Activity, pageNumber: Int, checkAdd: Activity = MainActivity() ,idx: Int= -55){
     menu.setOnClickListener{
         popupMenu.show()
@@ -157,6 +157,18 @@ fun toolbarFun(menu:View, context: Context, popupMenu : PopupMenu, activity: Act
                     }
                     else {
                         val intent = Intent(context, CalendarActivity::class.java)
+                        startActivity(context, intent, null)
+                        if (pageNumber == 3) checkAdd.finish()
+                        if (pageNumber != 0) activity.finish()
+                    }
+                    return@setOnMenuItemClickListener true
+                }
+                R.id.go_comment -> {
+                    if(pageNumber == 6){
+                        showToast(context, "이미 방명록 화면입니다.")
+                    }
+                    else {
+                        val intent = Intent(context, CommentActivity::class.java)
                         startActivity(context, intent, null)
                         if (pageNumber == 3) checkAdd.finish()
                         if (pageNumber != 0) activity.finish()
