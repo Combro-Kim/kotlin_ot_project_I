@@ -6,18 +6,21 @@
     <string name="maker">만든이\n팀장: 김재현\n팀원: 김재혁\n팀원: 이성민\n팀원: 임채명 </string>
     <string name="textBar">created by I</string>
 
-    작성 예시
+    <!--작성 예시
     ScrollView\nhttp://www.naver.com\n\nViewBinding\nhttp://www.google.com\n\n
     기술(줄내림)참조사이트(줄내림줄내림)기술2(줄내림)참조사이트(줄내림줄내림)
 
     or 참조 사이트 없을 시,
     ScrollView\n\nViewBinding
-    기술1(줄내림줄내림)기술2
+    기술1(줄내림줄내림)기술2-->
 
     <string name="referenceText">
-        네이버\nhttp://www.naver.com\n\
-        ViewBinding\https://velog.io/@dev_dejavu/android-View-binding%EA%B3%BC-Data-binding-%EB%B9%84%EA%B5%90\n\
-        Calendar\https://stickode.tistory.com/139\n\
+        "네이버"\n
+        "http://www.naver.com"\n\n
+        "ViewBinding"\n
+        "https://velog.io/@dev_dejavu/android-View-binding%EA%B3%BC-Data-binding-%EB%B9%84%EA%B5%90"\n\n
+        "Calendar"\n
+
 
 
 

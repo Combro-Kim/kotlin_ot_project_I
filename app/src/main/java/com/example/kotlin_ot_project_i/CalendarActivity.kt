@@ -52,6 +52,10 @@ class CalendarActivity : AppCompatActivity() {
             binding.diaryContent.text = str
             binding.diaryContent.visibility = View.VISIBLE
         }
+        val popupMenu = PopupMenu(applicationContext,binding.calendarToolbar.menuBtn)
+        menuInflater.inflate(R.menu.menu_pop_up, popupMenu.menu)
+        toolbarFun(binding.calendarToolbar.menuBtn,this ,popupMenu, this, 5)
+        returnFun(binding.calendarToolbar.returnBtn, this)
 
     }
     fun checkDay(cYear: Int, cMonth: Int, cDay: Int, userID: String) {
@@ -133,13 +137,6 @@ class CalendarActivity : AppCompatActivity() {
             e.printStackTrace()
         }
 
-        val popupMenu = PopupMenu(applicationContext,binding.calendarToolbar.menuBtn)
-        menuInflater.inflate(R.menu.menu_pop_up, popupMenu.menu)
-        toolbarFun(binding.calendarToolbar.menuBtn,this ,popupMenu, this, 4)
-        returnFun(binding.calendarToolbar.returnBtn, this)
-
-
-
-
     }
+
 }
