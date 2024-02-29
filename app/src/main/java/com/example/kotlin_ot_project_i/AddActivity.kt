@@ -38,7 +38,7 @@ class AddActivity : AppCompatActivity() {
             putString(UserComment4,binding.nameEitText4.text.toString())
             apply()
         }
-        Toast.makeText(this,"저장 완료!!",Toast.LENGTH_SHORT).show()
+        showToast(this, "저장 완료!!")
     }
 }
 
