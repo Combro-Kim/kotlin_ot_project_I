@@ -19,52 +19,38 @@ class CalendarActivity : AppCompatActivity() {
     lateinit var fname: String
     lateinit var str: String
     lateinit var calendarView: CalendarView
-    lateinit var updateBtn: Button
-    lateinit var deleteBtn: Button
-    lateinit var saveBtn: Button
-    lateinit var diaryTextView: TextView
-    lateinit var diaryContent: TextView
-    lateinit var title: TextView
-    lateinit var contextEditText: EditText
 
     private lateinit var binding: ActivityCalendarBinding
-    override fun onCreate(savedInstanceState: Bundle?)
-    {
+    override fun onCreate(savedInstanceState: Bundle?){
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityCalendarBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        binding.calendarToolbar
-        binding.diaryTextView
-        binding.saveBtn
-        binding.deleteBtn
-        binding.updateBtn
-        binding.diaryContent
-        binding.title
-        binding.contextEditText
 
-        title.text = "달력 일정표"
 
-        calendarView.setOnDateChangeListener { view, year, month, datOfMonth ->
-            diaryTextView.visibility = View.VISIBLE
-            saveBtn.visibility = View.VISIBLE
-            contextEditText.visibility = View.VISIBLE
-            diaryContent.visibility = View.INVISIBLE
-            updateBtn.visibility = View.INVISIBLE
-            deleteBtn.visibility = View.INVISIBLE
-            diaryTextView.text = String.format("%d / %d / %d", year, month + 1, datOfMonth)
-            contextEditText.setText("")
+            binding.title.text = "달력 일정표"
+
+        binding.calenderView.setOnDateChangeListener { view, year, month, datOfMonth ->
+            binding.diaryTextView.visibility = View.VISIBLE
+            binding.saveBtn.visibility = View.VISIBLE
+            binding.contextEditText.visibility = View.VISIBLE
+            binding.diaryContent.visibility = View.INVISIBLE
+            binding.updateBtn.visibility = View.INVISIBLE
+            binding.deleteBtn.visibility = View.INVISIBLE
+            binding.diaryTextView.text = String.format("%d / %d / %d", year, month + 1, datOfMonth)
+            binding.contextEditText.setText("")
             checkDay(year, month, datOfMonth, userID)
         }
 
-        saveBtn.setOnClickListener {
+        binding.saveBtn.setOnClickListener {
             saveDiary(fname)
-            contextEditText.visibility = View.INVISIBLE
-            saveBtn.visibility = View.INVISIBLE
-            updateBtn.visibility = View.VISIBLE
-            deleteBtn.visibility = View.VISIBLE
-            str = contextEditText.text.toString()
-            diaryContent.text = str
-            diaryContent.visibility = View.VISIBLE
+            binding.contextEditText.visibility = View.INVISIBLE
+            binding.saveBtn.visibility = View.INVISIBLE
+            binding.updateBtn.visibility = View.VISIBLE
+            binding.deleteBtn.visibility = View.VISIBLE
+            str = binding.contextEditText.text.toString()
+            binding.diaryContent.text = str
+            binding.diaryContent.visibility = View.VISIBLE
         }
 
     }
@@ -78,44 +64,44 @@ class CalendarActivity : AppCompatActivity() {
             fileInputStream.read(filedata)
             fileInputStream.close()
             str = String(filedata)
-            contextEditText.visibility = View.INVISIBLE
-            diaryContent.visibility = View.VISIBLE
-            diaryContent.text = str
-            saveBtn.visibility = View.INVISIBLE
-            updateBtn.visibility = View.VISIBLE
-            deleteBtn.visibility = View.VISIBLE
+            binding.contextEditText.visibility = View.INVISIBLE
+            binding.diaryContent.visibility = View.VISIBLE
+            binding.diaryContent.text = str
+            binding.saveBtn.visibility = View.INVISIBLE
+            binding.updateBtn.visibility = View.VISIBLE
+            binding.deleteBtn.visibility = View.VISIBLE
 
-            updateBtn.setOnClickListener {
-                contextEditText.visibility = View.VISIBLE
-                diaryContent.visibility = View.INVISIBLE
-                contextEditText.setText(str)
-                saveBtn.visibility = View.INVISIBLE
-                updateBtn.visibility = View.INVISIBLE
-                deleteBtn.visibility = View.INVISIBLE
-                diaryContent.text = contextEditText.text
+            binding.updateBtn.setOnClickListener {
+                binding.contextEditText.visibility = View.VISIBLE
+                binding.diaryContent.visibility = View.INVISIBLE
+                binding.contextEditText.setText(str)
+                binding.saveBtn.visibility = View.INVISIBLE
+                binding.updateBtn.visibility = View.INVISIBLE
+                binding.deleteBtn.visibility = View.INVISIBLE
+                binding.diaryContent.text = binding.contextEditText.text
             }
 
 
 
 
-            deleteBtn.setOnClickListener {
-                diaryContent.visibility = View.INVISIBLE
-                updateBtn.visibility = View.INVISIBLE
-                deleteBtn.visibility = View.INVISIBLE
-                contextEditText.setText("")
-                contextEditText.visibility = View.VISIBLE
-                saveBtn.visibility = View.VISIBLE
+            binding.deleteBtn.setOnClickListener {
+                binding.diaryContent.visibility = View.INVISIBLE
+                binding.updateBtn.visibility = View.INVISIBLE
+                binding.deleteBtn.visibility = View.INVISIBLE
+                binding.contextEditText.setText("")
+                binding.contextEditText.visibility = View.VISIBLE
+                binding.saveBtn.visibility = View.VISIBLE
                 removeDiary(fname)
             }
 
 
-            if (diaryContent.text == null) {
-                diaryContent.visibility = View.INVISIBLE
-                updateBtn.visibility = View.INVISIBLE
-                deleteBtn.visibility = View.INVISIBLE
-                diaryTextView.visibility = View.VISIBLE
-                saveBtn.visibility = View.VISIBLE
-                contextEditText.visibility = View.VISIBLE
+            if (binding.diaryContent.text == null) {
+                binding.diaryContent.visibility = View.INVISIBLE
+                binding.updateBtn.visibility = View.INVISIBLE
+                binding.deleteBtn.visibility = View.INVISIBLE
+                binding.diaryTextView.visibility = View.VISIBLE
+                binding.saveBtn.visibility = View.VISIBLE
+                binding.contextEditText.visibility = View.VISIBLE
             }
         } catch (e: Exception) {
             e.printStackTrace()
@@ -140,7 +126,7 @@ class CalendarActivity : AppCompatActivity() {
         var fileOutputStream: FileOutputStream
         try {
             fileOutputStream = openFileOutput(readDay, MODE_NO_LOCALIZED_COLLATORS)
-            val content = contextEditText.text.toString()
+            val content = binding.contextEditText.text.toString()
             fileOutputStream.write(content.toByteArray())
             fileOutputStream.close()
         } catch (e: java.lang.Exception) {

@@ -15,6 +15,12 @@
     기술1(줄내림줄내림)기술2
 
     <string name="referenceText">
-    네이버\nhttp://www.naver.com\n</string>
+        네이버\nhttp://www.naver.com\n\
+        ViewBinding\https://velog.io/@dev_dejavu/android-View-binding%EA%B3%BC-Data-binding-%EB%B9%84%EA%B5%90\n\
+        Calendar\https://stickode.tistory.com/139\n\
+
+
+
+    </string>
 
 </resources>
