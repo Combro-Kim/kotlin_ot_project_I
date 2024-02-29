@@ -3,15 +3,18 @@
     <string name="credits">CREDITS</string>
     <string name="used">"사용된 것"</string>
     <string name="reference">"제작 및 참조"</string>
-    <string name="maker">만든이\n
-        팀장: 김재현\n
-        팀원: 김재혁\n
-        팀원: 이성민\n
-        팀원: 임채명 </string>
+    <string name="maker">만든이\n팀장: 김재현\n팀원: 김재혁\n팀원: 이성민\n팀원: 임채명 </string>
+    <string name="textBar">created by I</string>
 
-    <string name="skill">
-    RecyclerView\nViewPager2\nScrollView\nViewBinding\nWhen\nIf~else\nIntent\ndddddddd\nqenkwqe\nqwnkelqwe\nqnkeqwnlekqw\nqwneklnqwekl</string>
-    <string name="refer">
-    RecyclerView\nViewPager2\nScrollView\nViewBinding\nWhen\nIf~else\nIntent\ndddddddd\nqenkwqe\nqwnkelqwe\nqnkeqwnlekqw\nqwneklnqwekl</string>
+    작성 예시
+    ScrollView\nhttp://www.naver.com\n\nViewBinding\nhttp://www.google.com\n\n
+    기술(줄내림)참조사이트(줄내림줄내림)기술2(줄내림)참조사이트(줄내림줄내림)
+
+    or 참조 사이트 없을 시,
+    ScrollView\n\nViewBinding
+    기술1(줄내림줄내림)기술2
+
+    <string name="referenceText">
+    네이버\nhttp://www.naver.com\n</string>
 
 </resources>
