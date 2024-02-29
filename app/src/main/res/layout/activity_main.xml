@@ -27,27 +27,30 @@
 
     <View
         android:id="@+id/view2"
-        android:layout_width="160dp"
+        android:layout_width="0dp"
         android:layout_height="3dp"
+        app:layout_constraintVertical_weight="1"
         android:layout_marginStart="15dp"
+        android:layout_marginEnd="240dp"
         android:background="#A5A5A5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/teamName" />
 
     <ImageView
         android:id="@+id/teamIB"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="170dp"
+        android:layout_marginTop="70dp"
         android:paddingStart="15dp"
         android:paddingTop="10dp"
         android:paddingEnd="15dp"
         android:scaleType="fitXY"
         android:src="@drawable/pic99"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/view2"
+        app:layout_constraintTop_toTopOf="parent"
         tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
 
     <TextView
