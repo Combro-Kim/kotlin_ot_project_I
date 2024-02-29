@@ -23,7 +23,7 @@ class CreditsActivity : AppCompatActivity() {
 
         val popupMenu = PopupMenu(applicationContext,binding.creditBar.menuBtn)
         menuInflater.inflate(R.menu.menu_pop_up, popupMenu.menu)
-        toolbarFun(binding.creditBar.menuBtn,this ,popupMenu, this, 4)
+        toolbarFun(binding.creditBar.menuBtn,this ,popupMenu, this, 5)
         returnFun(binding.creditBar.returnBtn, this)
 
     }

@@ -151,6 +151,20 @@ fun toolbarFun(menu:View, context: Context, popupMenu : PopupMenu, activity: Act
                     }
                     return@setOnMenuItemClickListener true
                 }
+                R.id.go_calendar -> {
+                    if(pageNumber == 5){
+                        showToast(context, "이미 일정 화면입니다.")
+                    }
+                    else {
+                        val intent = Intent(context, CalendarActivity::class.java)
+                        startActivity(context, intent, null)
+                        if (pageNumber == 3) checkAdd.finish()
+                        if (pageNumber != 0) activity.finish()
+                    }
+                    return@setOnMenuItemClickListener true
+                }
+
+
                 else -> return@setOnMenuItemClickListener false
             }
         }
