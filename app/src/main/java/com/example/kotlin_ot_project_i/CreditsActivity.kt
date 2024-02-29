@@ -3,6 +3,7 @@ package com.example.kotlin_ot_project_i
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.text.method.ScrollingMovementMethod
 import android.widget.PopupMenu
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -17,6 +18,8 @@ class CreditsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityCreditsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        binding.referenceText.movementMethod = ScrollingMovementMethod.getInstance()
 
         val popupMenu = PopupMenu(applicationContext,binding.creditBar.menuBtn)
         menuInflater.inflate(R.menu.menu_pop_up, popupMenu.menu)
