@@ -33,7 +33,7 @@ fun returnFun(view: View, activity: Activity){
 }
 
 
-// main: 0 team: 1 personal: 2 add: 3 credit: 4
+// pageNumber -> main: 0 team: 1 personal: 2 add: 3 credit: 4
 fun toolbarFun(menu:View, context: Context, popupMenu : PopupMenu, activity: Activity, pageNumber: Int, checkAdd: Activity = MainActivity() ,idx: Int= -55){
     menu.setOnClickListener{
         popupMenu.show()
@@ -47,8 +47,6 @@ fun toolbarFun(menu:View, context: Context, popupMenu : PopupMenu, activity: Act
                         val intent = Intent(context, MainActivity::class.java)
                         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                         startActivity(context, intent, null)
-                        if (pageNumber == 3) TeamActivity().finish()
-                        activity.finish()
                     }
                     return@setOnMenuItemClickListener true
                 }
@@ -59,8 +57,8 @@ fun toolbarFun(menu:View, context: Context, popupMenu : PopupMenu, activity: Act
                     }
                     else {
                         val intent = Intent(context, TeamActivity::class.java)
-                        if (pageNumber == 3) intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
                         startActivity(context, intent, null)
+                        if (pageNumber == 3) checkAdd.finish()
                         if (pageNumber != 0) activity.finish()
                     }
                     return@setOnMenuItemClickListener true
