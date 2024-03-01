@@ -8,7 +8,6 @@
     tools:context=".TeamActivity">
 
 
-
     <include
         android:id="@+id/team_toolbar"
         layout="@layout/toolbar" />
@@ -38,15 +37,14 @@
 
     <ImageView
         android:id="@+id/teamImageView"
-        android:layout_width="380dp"
+        android:layout_width="0dp"
         android:layout_height="200dp"
-
         android:layout_gravity="center"
-        android:scaleType="fitXY"
         android:layout_marginStart="20dp"
-        android:layout_marginEnd="20dp"
         android:layout_marginTop="15dp"
+        android:layout_marginEnd="20dp"
         android:importantForAccessibility="no"
+        android:scaleType="fitXY"
         android:src="@drawable/team_pic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
@@ -142,6 +140,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="35dp"
+        android:maxLines="1"
         app:layout_constraintBaseline_toBaselineOf="@id/nameTextView1"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/nameTextView1" />
@@ -152,6 +151,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="35dp"
+        android:maxLines="1"
         app:layout_constraintBaseline_toBaselineOf="@id/nameTextView2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/nameTextView2" />
@@ -162,6 +162,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="35dp"
+        android:maxLines="1"
         app:layout_constraintBaseline_toBaselineOf="@id/nameTextView3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/nameTextView3" />
@@ -172,6 +173,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:layout_marginEnd="35dp"
+        android:maxLines="1"
         app:layout_constraintBaseline_toBaselineOf="@id/nameTextView4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/nameTextView4" />
@@ -183,10 +185,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:clickable="true"
+        android:importantForAccessibility="no"
         android:src="@drawable/icon_add"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:importantForAccessibility="no" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/deleteButton"
@@ -194,10 +196,10 @@
         android:layout_height="wrap_content"
         android:layout_margin="30dp"
         android:clickable="true"
+        android:importantForAccessibility="no"
         android:src="@drawable/baseline_delete_outline_24"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/addButton"
-        android:importantForAccessibility="no" />
+        app:layout_constraintEnd_toStartOf="@id/addButton" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
