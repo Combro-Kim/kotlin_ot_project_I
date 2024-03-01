@@ -18,7 +18,6 @@ class CalendarActivity : AppCompatActivity() {
     var userID: String = "userID"
     lateinit var fname: String
     lateinit var str: String
-    lateinit var calendarView: CalendarView
 
     private lateinit var binding: ActivityCalendarBinding
     override fun onCreate(savedInstanceState: Bundle?){
@@ -43,14 +42,18 @@ class CalendarActivity : AppCompatActivity() {
         }
 
         binding.saveBtn.setOnClickListener {
-            saveDiary(fname)
-            binding.contextEditText.visibility = View.INVISIBLE
-            binding.saveBtn.visibility = View.INVISIBLE
-            binding.updateBtn.visibility = View.VISIBLE
-            binding.deleteBtn.visibility = View.VISIBLE
-            str = binding.contextEditText.text.toString()
-            binding.diaryContent.text = str
-            binding.diaryContent.visibility = View.VISIBLE
+            if(binding.contextEditText.text.toString() == ""){
+                showToast(this, "일정을 입력해 주세요")
+            }else {
+                saveDiary(fname)
+                binding.contextEditText.visibility = View.INVISIBLE
+                binding.saveBtn.visibility = View.INVISIBLE
+                binding.updateBtn.visibility = View.VISIBLE
+                binding.deleteBtn.visibility = View.VISIBLE
+                str = binding.contextEditText.text.toString()
+                binding.diaryContent.text = str
+                binding.diaryContent.visibility = View.VISIBLE
+            }
         }
         val popupMenu = PopupMenu(applicationContext,binding.calendarToolbar.menuBtn)
         menuInflater.inflate(R.menu.menu_pop_up, popupMenu.menu)
