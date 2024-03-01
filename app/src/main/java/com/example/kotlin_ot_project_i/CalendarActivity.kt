@@ -28,7 +28,7 @@ class CalendarActivity : AppCompatActivity() {
 
 
 
-            binding.title.text = "달력 일정표"
+        binding.title.text = "달력 일정표"
 
         binding.calenderView.setOnDateChangeListener { view, year, month, datOfMonth ->
             binding.diaryTextView.visibility = View.VISIBLE
@@ -79,7 +79,7 @@ class CalendarActivity : AppCompatActivity() {
                 binding.contextEditText.visibility = View.VISIBLE
                 binding.diaryContent.visibility = View.INVISIBLE
                 binding.contextEditText.setText(str)
-                binding.saveBtn.visibility = View.INVISIBLE
+                binding.saveBtn.visibility = View.VISIBLE
                 binding.updateBtn.visibility = View.INVISIBLE
                 binding.deleteBtn.visibility = View.INVISIBLE
                 binding.diaryContent.text = binding.contextEditText.text

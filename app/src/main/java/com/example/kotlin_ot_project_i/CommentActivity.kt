@@ -36,27 +36,31 @@ class CommentActivity : AppCompatActivity() {
 
         binding.commentRecyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         binding.commentRecyclerView.adapter = adapter
+        commentUpdate()
 
         binding.resetButton.setOnClickListener {
-            db.collection("articles")
-                .get()
-                .addOnSuccessListener { result ->
-                    itemList.clear()
-                    for (document in result) {
-                        val item = ItemLayout(document["name"] as String, document["comment"] as String)
-                        itemList.add(item)
-                    }
-                    adapter.notifyDataSetChanged() // recyclerVIew 갱신
-                }
-                .addOnFailureListener { exception ->
-                    Toast.makeText(this, "불러오기 실패", Toast.LENGTH_SHORT).show()
-                    Log.w("CommentActivity", "Error for: $exception")
-                }
+            commentUpdate()
         }
         binding.addButton.setOnClickListener {
             commentAdd()
-
+            commentUpdate()
         }
+    }
+    private fun commentUpdate(){
+        db.collection("articles")
+            .get()
+            .addOnSuccessListener { result ->
+                itemList.clear()
+                for (document in result) {
+                    val item = ItemLayout(document["name"] as String, document["comment"] as String)
+                    itemList.add(item)
+                }
+                adapter.notifyDataSetChanged() // recyclerVIew 갱신
+            }
+            .addOnFailureListener { exception ->
+                showToast(this, "불러오기 실패")
+                Log.w("CommentActivity", "Error for: $exception")
+            }
     }
 
     private fun commentAdd() {
