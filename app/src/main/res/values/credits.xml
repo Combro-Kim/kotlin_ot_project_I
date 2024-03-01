@@ -28,6 +28,16 @@
         "https://haruple.tistory.com/224"\n\n
         "팝업 메뉴"\n
         "https://jason-api.tistory.com/31"\n\n
+        "단순 데이터 저장"\n
+        "https://developer.android.com/training/data-storage/shared-preferences?hl=ko"\n\n
+        "테마 변경"\n
+        "https://developer.android.com/reference/androidx/appcompat/app/AppCompatDelegate"\n\n
+        "이미지 슬라이드"\n
+        "https://developer.android.com/jetpack/androidx/releases/viewpager2?hl=ko"\n\n
+        "Indicator"\n
+        "https://github.com/tommybuonomo/dotsindicator"\n\n
+        "방명록"\n
+        "https://firebase.google.com/docs/firestore/query-data/get-data?_gl=1*7zzexa*_up*MQ..*_ga*MTcwNjY1ODY2Ni4xNzA5MTY5MjMz*_ga_CW55HF8NVT*MTcwOTE2OTIzMy4xLjAuMTcwOTE2OTI3My4wLjAuMA..&amp;gclid=Cj0KCQjw-pCVBhCFARIsAGMxhAfJIsNyErOjX8xKPYMYEVvPA7RQfxIPUYPoUTFIe7BgyBI-lgBgbeMaAtxcEALw_wcB&amp;gclsrc=aw.ds&amp;hl=ko#example_data"\n\n
 
     </string>
 
