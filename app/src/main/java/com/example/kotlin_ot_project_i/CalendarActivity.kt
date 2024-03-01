@@ -99,7 +99,7 @@ class CalendarActivity : AppCompatActivity() {
             }
 
 
-            if (binding.diaryContent.text == null) {
+            if (binding.diaryContent.text == "") {
                 binding.diaryContent.visibility = View.INVISIBLE
                 binding.updateBtn.visibility = View.INVISIBLE
                 binding.deleteBtn.visibility = View.INVISIBLE
