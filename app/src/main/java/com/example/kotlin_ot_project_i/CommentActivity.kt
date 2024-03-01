@@ -43,7 +43,6 @@ class CommentActivity : AppCompatActivity() {
         }
         binding.addButton.setOnClickListener {
             commentAdd()
-            commentUpdate()
         }
     }
     private fun commentUpdate(){
@@ -93,6 +92,7 @@ class CommentActivity : AppCompatActivity() {
                 .add(data)
                 .addOnSuccessListener {
                     Toast.makeText(this, "데이터가 추가되었습니다", Toast.LENGTH_SHORT).show()
+                    commentUpdate()
                 }
                 .addOnFailureListener { exception ->
                     Log.w("CommentActivity", "Error for: $exception")
