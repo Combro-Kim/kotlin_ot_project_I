@@ -6,9 +6,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.PopupMenu
 import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.view.isVisible
 import com.example.kotlin_ot_project_i.databinding.ActivityTeamBinding
 
 class TeamActivity : AppCompatActivity() {

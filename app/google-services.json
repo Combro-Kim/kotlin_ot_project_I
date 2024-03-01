@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "616925903399",
+    "firebase_url": "https://kotlin-toy-project-default-rtdb.firebaseio.com",
+    "project_id": "kotlin-toy-project",
+    "storage_bucket": "kotlin-toy-project.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:616925903399:android:06c24851c4ccc6679eec02",
+        "android_client_info": {
+          "package_name": "com.example.kotlin_ot_project_i"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdVWs07ouh43_1xKyce_F03N75-qeKw58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
