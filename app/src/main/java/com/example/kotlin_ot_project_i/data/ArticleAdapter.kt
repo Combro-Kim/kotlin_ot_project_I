@@ -26,6 +26,6 @@ class ArticleAdapter(private val itemList: ArrayList<ItemLayout>) : RecyclerView
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val name: TextView = itemView.findViewById(R.id.list_tv_name)
-        val comment: TextView = itemView.findViewById(R.id.list_tv_number)
+        val comment: TextView = itemView.findViewById(R.id.list_tv_comment)
     }
 }

@@ -19,6 +19,7 @@ class AddActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityAddBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
         val teamActivity = TeamActivity.teamActivity
         binding.plusButton.setOnClickListener {
             saveData()
