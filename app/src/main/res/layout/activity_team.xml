@@ -47,7 +47,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginTop="15dp"
         android:importantForAccessibility="no"
-        android:src="@drawable/pic99"
+        android:src="@drawable/team_pic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
