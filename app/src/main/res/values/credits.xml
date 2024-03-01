@@ -15,11 +15,19 @@
     기술1(줄내림줄내림)기술2-->
 
     <string name="referenceText">
-        "네이버"\n
-        "http://www.naver.com"\n\n
+
         "ViewBinding"\n
         "https://velog.io/@dev_dejavu/android-View-binding%EA%B3%BC-Data-binding-%EB%B9%84%EA%B5%90"\n\n
         "Calendar"\n
+        ""\n\n
+        "Toolbar"\n
+        "https://warmdeveloper.tistory.com/32"\n\n
+        "이전 Activity에 접근"\n
+        "https://jige.tistory.com/11"\n\n
+        "스택"\n
+        "https://haruple.tistory.com/224"\n\n
+        "팝업 메뉴"\n
+        "https://jason-api.tistory.com/31"\n\n
 
 
 
