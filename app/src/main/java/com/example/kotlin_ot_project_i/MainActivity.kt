@@ -1,15 +1,9 @@
 package com.example.kotlin_ot_project_i
 
-import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Message
-import android.view.View
 import android.widget.PopupMenu
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import com.example.kotlin_ot_project_i.databinding.ActivityMainBinding
 
@@ -25,7 +19,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
         val popupMenu = PopupMenu(applicationContext,binding.mainToolbar.menuBtn)
         menuInflater.inflate(R.menu.menu_pop_up, popupMenu.menu)
-        toolbarFun(binding.mainToolbar.menuBtn,this, popupMenu, this, 0)
+        toolbarFun(binding.mainToolbar.menuBtn, popupMenu, this, 0)
         binding.teamIB.setOnClickListener {
             val intent = Intent(this, TeamActivity::class.java)
             startActivity(intent)

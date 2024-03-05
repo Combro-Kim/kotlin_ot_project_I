@@ -10,20 +10,16 @@ import com.example.kotlin_ot_project_i.databinding.ActivityTeamBinding
 
 class TeamActivity : AppCompatActivity() {
 
-    companion object{
-        lateinit var teamActivity: TeamActivity
-    }
+
     private lateinit var binding: ActivityTeamBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityTeamBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        teamActivity = this
-
         val popupMenu = PopupMenu(applicationContext,binding.teamToolbar.menuBtn)
         menuInflater.inflate(R.menu.menu_pop_up, popupMenu.menu)
-        toolbarFun(binding.teamToolbar.menuBtn, this, popupMenu, this, 1)
+        toolbarFun(binding.teamToolbar.menuBtn, popupMenu, this, 1)
         returnFun(binding.teamToolbar.returnBtn, this)
 
         binding.addButton.setOnClickListener {

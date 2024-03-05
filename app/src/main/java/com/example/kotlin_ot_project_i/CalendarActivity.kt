@@ -5,12 +5,7 @@ import java.io.FileInputStream
 import java.io.FileOutputStream
 import android.view.View
 import android.os.Bundle
-import android.widget.Button
-import android.widget.CalendarView
-import android.widget.EditText
 import android.widget.PopupMenu
-import android.widget.TextView
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.kotlin_ot_project_i.databinding.ActivityCalendarBinding
 
@@ -57,14 +52,14 @@ class CalendarActivity : AppCompatActivity() {
         }
         val popupMenu = PopupMenu(applicationContext,binding.calendarToolbar.menuBtn)
         menuInflater.inflate(R.menu.menu_pop_up, popupMenu.menu)
-        toolbarFun(binding.calendarToolbar.menuBtn,this ,popupMenu, this, 5)
+        toolbarFun(binding.calendarToolbar.menuBtn, popupMenu, this, 5)
         returnFun(binding.calendarToolbar.returnBtn, this)
 
     }
     fun checkDay(cYear: Int, cMonth: Int, cDay: Int, userID: String) {
         fname = "" + userID + cYear + "-" + (cMonth + 1) + "" + "-" + cDay + ".txt"
 
-        var fileInputStream: FileInputStream
+        val fileInputStream: FileInputStream
         try {
             fileInputStream = openFileInput(fname)
             val filedata = ByteArray(fileInputStream.available())
@@ -117,7 +112,7 @@ class CalendarActivity : AppCompatActivity() {
 
     @SuppressLint("WrongConstant")
     fun removeDiary(readDay: String?) {
-        var fileOutputStream: FileOutputStream
+        val fileOutputStream: FileOutputStream
         try {
             fileOutputStream = openFileOutput(readDay, MODE_NO_LOCALIZED_COLLATORS)
             val content = ""
@@ -130,7 +125,7 @@ class CalendarActivity : AppCompatActivity() {
 
     @SuppressLint("WrongConstant")
     fun saveDiary(readDay: String?) {
-        var fileOutputStream: FileOutputStream
+        val fileOutputStream: FileOutputStream
         try {
             fileOutputStream = openFileOutput(readDay, MODE_NO_LOCALIZED_COLLATORS)
             val content = binding.contextEditText.text.toString()

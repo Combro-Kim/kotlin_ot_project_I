@@ -17,9 +17,8 @@ class PersonalActivity : AppCompatActivity() {
         val idxOfToolbar = intent.getIntExtra("indexNumber", 0)
         val popupMenu = PopupMenu(applicationContext, binding.personalToolbar.menuBtn)
         menuInflater.inflate(R.menu.menu_pop_up, popupMenu.menu)
-        toolbarFun(binding.personalToolbar.menuBtn, this, popupMenu, this, 2, idx = idxOfToolbar)
+        toolbarFun(binding.personalToolbar.menuBtn, popupMenu, this, 2, idx = idxOfToolbar)
         returnFun(binding.personalToolbar.returnBtn, this)
-
 
         binding.viewPager.adapter = if (idxOfToolbar == 0) {
             indicator(getImageList1())

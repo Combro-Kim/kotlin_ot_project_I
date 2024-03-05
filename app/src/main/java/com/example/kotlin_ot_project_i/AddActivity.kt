@@ -1,14 +1,9 @@
 package com.example.kotlin_ot_project_i
 
 import android.content.Context
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.PopupMenu
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
-import androidx.appcompat.app.AppCompatDelegate
-import androidx.core.view.isVisible
 import com.example.kotlin_ot_project_i.databinding.ActivityAddBinding
 
 class AddActivity : AppCompatActivity() {
@@ -20,14 +15,13 @@ class AddActivity : AppCompatActivity() {
         binding = ActivityAddBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        val teamActivity = TeamActivity.teamActivity
         binding.plusButton.setOnClickListener {
             saveData()
             finish()
         }
         val popupMenu = PopupMenu(applicationContext,binding.addToolbar.menuBtn)
         menuInflater.inflate(R.menu.menu_pop_up, popupMenu.menu)
-        toolbarFun(binding.addToolbar.menuBtn,this, popupMenu, this, 3, checkAdd = teamActivity)
+        toolbarFun(binding.addToolbar.menuBtn, popupMenu, this, 3)
         returnFun(binding.addToolbar.returnBtn, this)
     }
 
